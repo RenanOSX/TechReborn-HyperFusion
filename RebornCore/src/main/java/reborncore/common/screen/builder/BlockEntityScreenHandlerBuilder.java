@@ -168,7 +168,6 @@ public class BlockEntityScreenHandlerBuilder {
 
 	public BlockEntityScreenHandlerBuilder syncEnergyValue() {
 		if (this.blockEntity instanceof PowerAcceptorBlockEntity powerAcceptor) {
-
 			return this.sync(powerAcceptor::getEnergy, powerAcceptor::setEnergy)
 					.sync(powerAcceptor::getExtraPowerStorage, powerAcceptor::setExtraPowerStorage)
 					.sync(powerAcceptor::getPowerChange, powerAcceptor::setPowerChange);

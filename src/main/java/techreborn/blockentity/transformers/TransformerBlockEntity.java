@@ -54,18 +54,18 @@ public class TransformerBlockEntity extends PowerAcceptorBlockEntity implements 
 	public final Block wrenchDrop;
 	public final RcEnergyTier inputTier;
 	public final RcEnergyTier outputTier;
-	public final int maxInput;
-	public final int maxOutput;
-	public final int maxStorage;
+	public final long maxInput;
+	public final long maxOutput;
+	public final long maxStorage;
 
 	public TransformerBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, Block wrenchDrop, RcEnergyTier tier) {
 		super(blockEntityType, pos, state);
 		this.wrenchDrop = wrenchDrop;
 		this.inputTier = tier;
-		if (tier != RcEnergyTier.MICRO) {
+		if (tier != RcEnergyTier.LV) {
 			outputTier = RcEnergyTier.values()[tier.ordinal() - 1];
 		} else {
-			outputTier = RcEnergyTier.MICRO;
+			outputTier = RcEnergyTier.LV;
 		}
 		this.name = name;
 		this.maxInput = tier.getMaxInput();

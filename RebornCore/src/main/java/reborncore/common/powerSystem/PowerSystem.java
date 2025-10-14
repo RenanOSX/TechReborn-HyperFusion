@@ -31,9 +31,9 @@ import java.text.DecimalFormat;
 public class PowerSystem {
 	public static final String ABBREVIATION = "E";
 
-	private static final char[] magnitude = new char[] { 'k', 'M', 'G', 'T' };
+	private static final char[] magnitude = new char[] { 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q' };
 
-	public static String getLocalizedPower(double power) {
+	public static String getLocalizedPower(long power) {
 
 		return getRoundedString(power, ABBREVIATION, true);
 	}
@@ -80,6 +80,10 @@ public class PowerSystem {
 			value = euValue;
 		} else if (euValue >= 1000) {
 			for (i = 0; ; i++) {
+				if (i == magnitude.length - 1) {
+					value = euValue;
+					break;
+				}
 				if (euValue < 10000 && euValue % 1000 >= 100) {
 					value = Math.floor(euValue / 1000);
 					value += ((float) euValue % 1000) / 1000;
@@ -93,11 +97,8 @@ public class PowerSystem {
 			}
 		}
 
-		if (i > 10) {
+		if (i >= magnitude.length) {
 			doFormat = false;
-			showMagnitude = false;
-		} else if (i > 3) {
-			value = originalValue;
 			showMagnitude = false;
 		}
 
@@ -110,7 +111,7 @@ public class PowerSystem {
 			}
 		}
 		else {
-			if (i>10){
+			if (i >= magnitude.length){
 				ret += "∞";
 			}
 			else {

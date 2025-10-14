@@ -125,7 +125,7 @@ public class RockCutterItem extends PickaxeItem implements RcEnergyItem {
 
 	@Override
 	public RcEnergyTier getTier() {
-		return RcEnergyTier.MEDIUM;
+		return RcEnergyTier.MV;
 	}
 
 	@Override

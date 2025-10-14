@@ -72,7 +72,7 @@ public class WindMillBlockEntity extends PowerAcceptorBlockEntity implements ITo
 		}
 
 		if (generating) {
-			int actualPower = TechRebornConfig.windMillBaseEnergy;
+			long actualPower = TechRebornConfig.windMillBaseEnergy;
 			if (world.isThundering()) {
 				actualPower *= TechRebornConfig.windMillThunderMultiplier;
 			}

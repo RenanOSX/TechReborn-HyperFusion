@@ -54,6 +54,6 @@ public class GuiGenerator extends GuiBase<BuiltScreenHandler> {
 		final Layer layer = Layer.FOREGROUND;
 
 		builder.drawBurnBar(drawContext, this, blockEntity.getScaledBurnTime(100), 100, 81, 38, mouseX, mouseY, layer);
-		builder.drawMultiEnergyBar(drawContext, this, 9, 19, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 9, 19, blockEntity.getEnergy(), blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 }

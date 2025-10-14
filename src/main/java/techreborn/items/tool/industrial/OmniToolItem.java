@@ -136,7 +136,7 @@ public class OmniToolItem extends MiningToolItem implements RcEnergyItem, IToolH
 
 	@Override
 	public RcEnergyTier getTier() {
-		return RcEnergyTier.EXTREME;
+		return RcEnergyTier.EV;
 	}
 
 	@Override

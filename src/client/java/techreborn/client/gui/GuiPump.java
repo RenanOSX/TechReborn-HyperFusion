@@ -95,6 +95,6 @@ public class GuiPump extends GuiBase<BuiltScreenHandler> {
 		final Layer layer = Layer.FOREGROUND;
 
 		builder.drawTank(drawContext, this, 33, 25, mouseX, mouseY, blockEntity.getTank().getFluidInstance(), blockEntity.getTank().getFluidValueCapacity(), blockEntity.getTank().isEmpty(), layer);
-		builder.drawMultiEnergyBar(drawContext, this, 9, 19, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 9, 19, blockEntity.getEnergy(), blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 }

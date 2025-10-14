@@ -58,7 +58,7 @@ public class QuantumSuitItem extends TREnergyArmourItem implements ArmorBlockEnt
 	private final Multimap<EntityAttribute, EntityAttributeModifier> fullSuitSprintAttributes;
 
 	public QuantumSuitItem(ArmorMaterial material, Type slot) {
-		super(material, slot, TechRebornConfig.quantumSuitCapacity, RcEnergyTier.INSANE);
+		super(material, slot, TechRebornConfig.quantumSuitCapacity, RcEnergyTier.IV);
 		switch (slot) {
 			case HELMET, BOOTS:
 				noPowerAttributes = new AttributeModifierBuilder(slot).armor(3).toughness(2).build();

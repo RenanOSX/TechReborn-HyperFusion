@@ -45,7 +45,7 @@ public interface BlockProcessable extends IUpgradeHandler, RedstoneConfigurable,
 	 * @param amount {@code int} amount of energy to consume
 	 * @return if the energy could be consumed
 	 */
-	boolean consumeEnergy(int amount);
+	boolean consumeEnergy(long amount);
 
 	/**
 	 * <b>Play a sound to the Minecraft world</b>

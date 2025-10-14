@@ -50,8 +50,8 @@ public abstract class GenericMachineBlockEntity extends PowerAcceptorBlockEntity
 		implements IToolDrop, InventoryProvider, IRecipeCrafterProvider {
 
 	public final String name;
-	public final int maxInput;
-	public final int maxEnergy;
+	public final long maxInput;
+	public final long maxEnergy;
 	public final Block toolDrop;
 	public final int energySlot;
 	public RebornInventory<?> inventory;
@@ -64,7 +64,7 @@ public abstract class GenericMachineBlockEntity extends PowerAcceptorBlockEntity
 	 * @param toolDrop   {@link Block} Block to drop with wrench
 	 * @param energySlot {@code int} Energy slot to use to charge machine from battery
 	 */
-	public GenericMachineBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, int maxInput, int maxEnergy, Block toolDrop, int energySlot) {
+	public GenericMachineBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, long maxInput, long maxEnergy, Block toolDrop, int energySlot) {
 		super(blockEntityType, pos, state);
 		this.name = "BlockEntity" + name;
 		this.maxInput = maxInput;

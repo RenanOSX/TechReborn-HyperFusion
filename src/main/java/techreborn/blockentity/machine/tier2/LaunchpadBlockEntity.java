@@ -82,7 +82,7 @@ public class LaunchpadBlockEntity extends PowerAcceptorBlockEntity implements IT
 		};
 	}
 
-	public int selectedEnergyCost() {
+	public long selectedEnergyCost() {
 		return switch(selection) {
 			case 0 -> TechRebornConfig.launchpadEnergyLow;
 			case 1 -> TechRebornConfig.launchpadEnergyMedium;
@@ -116,7 +116,7 @@ public class LaunchpadBlockEntity extends PowerAcceptorBlockEntity implements IT
 
 		ensureSelectionInRange();
 		final double speed = selectedSpeed();
-		final int energyCost = selectedEnergyCost();
+		final long energyCost = selectedEnergyCost();
 
 		if (getStored() > energyCost) {
 			List<Entity> entities = world.getNonSpectatingEntities(Entity.class, new Box(0d,1d,0d,1d,2d,1d).offset(pos));

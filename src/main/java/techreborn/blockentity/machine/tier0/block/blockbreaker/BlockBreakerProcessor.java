@@ -65,9 +65,9 @@ public class BlockBreakerProcessor extends BlockBreakerNbt implements BlockProce
 	private final int fakeInputSlot;
 
 	private final int baseBreakTime;
-	private final int baseCostToBreak;
+	private final long baseCostToBreak;
 
-	public BlockBreakerProcessor(BlockProcessable processable, int outputSlot, int fakeInputSlot, int baseBreakTime, int baseCostToBreak) {
+	public BlockBreakerProcessor(BlockProcessable processable, int outputSlot, int fakeInputSlot, int baseBreakTime, long baseCostToBreak) {
 		this.processable = processable;
 
 		this.outputSlot = outputSlot;

@@ -61,6 +61,6 @@ public class GuiAssemblingMachine extends GuiBase<BuiltScreenHandler> {
 		final GuiBase.Layer layer = GuiBase.Layer.FOREGROUND;
 
 		builder.drawProgressBar(drawContext, this, blockEntity.getProgressScaled(100), 100, 76, 48, mouseX, mouseY, GuiBuilder.ProgressDirection.RIGHT, layer);
-		builder.drawMultiEnergyBar(drawContext, this, 9, 19, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 9, 19, blockEntity.getEnergy(), blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 }

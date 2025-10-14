@@ -41,12 +41,12 @@ import techreborn.init.TRContent;
 
 
 public class JackhammerItem extends PickaxeItem implements RcEnergyItem {
-	public final int maxCharge;
+	public final long maxCharge;
 	public final RcEnergyTier tier;
-	public final int cost;
+	public final long cost;
 	protected final float unpoweredSpeed = 0.5F;
 
-	public JackhammerItem(ToolMaterial material, int energyCapacity, RcEnergyTier tier, int cost) {
+	public JackhammerItem(ToolMaterial material, long energyCapacity, RcEnergyTier tier, long cost) {
 		// combat stats same as for diamond pickaxe. Fix for #2468
 		super(material, 1, -2.8F, new Item.Settings().maxCount(1).maxDamage(-1));
 		this.maxCharge = energyCapacity;

@@ -34,245 +34,293 @@ public class TechRebornConfig {
 
 	// Generators
 	@Config(config = "generators", category = "solarPanelGeneral", key = "internalCapacity", comment = "Multiplier for internal capacity of solar panels (multiplier * day generation rate)")
-	public static int solarInternalCapacityMultiplier = 2000;
+	public static long solarInternalCapacityMultiplier = 2000;
 
 	@Config(config = "generators", category = "solarPanelBasic", key = "basicDayRate", comment = "Generation rate during day for Basic Solar Panel (Energy per tick)")
-	public static int basicGenerationRateD = 3;
+	public static long basicGenerationRateD = 3;
 
 	@Config(config = "generators", category = "solarPanelBasic", key = "basicNightRate", comment = "Generation rate during night for Basic Solar Panel (Energy per tick)")
-	public static int basicGenerationRateN = 0;
+	public static long basicGenerationRateN = 0;
 
 	@Config(config = "generators", category = "solarPanelAdvanced", key = "advancedDayRate", comment = "Generation rate during day for Advanced Solar Panel (Energy per tick)")
-	public static int advancedGenerationRateD = 12;
+	public static long advancedGenerationRateD = 12;
 
 	@Config(config = "generators", category = "solarPanelAdvanced", key = "advancedNightRate", comment = "Generation rate during night for Advanced Solar Panel (Energy per tick)")
-	public static int advancedGenerationRateN = 0;
+	public static long advancedGenerationRateN = 0;
 
 	@Config(config = "generators", category = "solarPanelIndustrial", key = "industrialDayRate", comment = "Generation rate during day for Industrial Solar Panel (Energy per tick)")
-	public static int industrialGenerationRateD = 24;
+	public static long industrialGenerationRateD = 24;
 
 	@Config(config = "generators", category = "solarPanelIndustrial", key = "industrialNightRate", comment = "Generation rate during night for Industrial Solar Panel (Energy per tick)")
-	public static int industrialGenerationRateN = 4;
+	public static long industrialGenerationRateN = 4;
 
 	@Config(config = "generators", category = "solarPanelUltimate", key = "ultimateDayRate", comment = "Generation rate during day for Ultimate Solar Panel (Energy per tick)")
-	public static int ultimateGenerationRateD = 48;
+	public static long ultimateGenerationRateD = 48;
 
 	@Config(config = "generators", category = "solarPanelUltimate", key = "ultimateNightRate", comment = "Generation rate during night for Ultimate Solar Panel (Energy per tick)")
-	public static int ultimateGenerationRateN = 8;
+	public static long ultimateGenerationRateN = 8;
 
 	@Config(config = "generators", category = "solarPanelQuantum", key = "quantumDayRate", comment = "Generation rate during day for Quantum Solar Panel (Energy per tick)")
-	public static int quantumGenerationRateD = 512;
+	public static long quantumGenerationRateD = 512;
 
 	@Config(config = "generators", category = "solarPanelQuantum", key = "quantumNightRate", comment = "Generation rate during night for Quantum Solar Panel (Energy per tick)")
-	public static int quantumGenerationRateN = 32;
+	public static long quantumGenerationRateN = 32;
+
+	@Config(config = "generators", category = "solarPanelSpectral", key = "spectralDayRate", comment = "Generation rate during day for Spectral Solar Panel (Energy per tick)")
+	public static long spectralGenerationRateD = 2048;
+
+	@Config(config = "generators", category = "solarPanelSpectral", key = "spectralNightRate", comment = "Generation rate during night for Spectral Solar Panel (Energy per tick)")
+	public static long spectralGenerationRateN = 128;
+
+	@Config(config = "generators", category = "solarPanelPhotonic", key = "photonicDayRate", comment = "Generation rate during day for Photonic Solar Panel (Energy per tick)")
+	public static long photonicGenerationRateD = 8192;
+
+	@Config(config = "generators", category = "solarPanelPhotonic", key = "photonicNightRate", comment = "Generation rate during night for Photonic Solar Panel (Energy per tick)")
+	public static long photonicGenerationRateN = 512;
+
+	@Config(config = "generators", category = "solarPanelDiffractive", key = "diffractiveDayRate", comment = "Generation rate during day for Diffractive Solar Panel (Energy per tick)")
+	public static long diffractiveGenerationRateD = 32768;
+
+	@Config(config = "generators", category = "solarPanelDiffractive", key = "diffractiveNightRate", comment = "Generation rate during night for Diffractive Solar Panel (Energy per tick)")
+	public static long diffractiveGenerationRateN = 2048;
+
+	@Config(config = "generators", category = "solarPanelProtonic", key = "protonicDayRate", comment = "Generation rate during day for Protonic Solar Panel (Energy per tick)")
+	public static long protonicGenerationRateD = 131072;
+
+	@Config(config = "generators", category = "solarPanelProtonic", key = "protonicNightRate", comment = "Generation rate during night for Protonic Solar Panel (Energy per tick)")
+	public static long protonicGenerationRateN = 8192;
+
+	@Config(config = "generators", category = "solarPanelNeutron", key = "neutronDayRate", comment = "Generation rate during day for Neutron Solar Panel (Energy per tick)")
+	public static long neutronGenerationRateD = 524288;
+
+	@Config(config = "generators", category = "solarPanelNeutron", key = "neutronNightRate", comment = "Generation rate during night for Neutron Solar Panel (Energy per tick)")
+	public static long neutronGenerationRateN = 32768;
+
+	@Config(config = "generators", category = "solarPanelBaryon", key = "baryonDayRate", comment = "Generation rate during day for Baryon Solar Panel (Energy per tick)")
+	public static long baryonGenerationRateD = 2097152;
+
+	@Config(config = "generators", category = "solarPanelBaryon", key = "baryonNightRate", comment = "Generation rate during night for Baryon Solar Panel (Energy per tick)")
+	public static long baryonGenerationRateN = 131072;
+
+	@Config(config = "generators", category = "solarPanelHadron", key = "hadronDayRate", comment = "Generation rate during day for Hadron Solar Panel (Energy per tick)")
+	public static long hadronGenerationRateD = 8388608;
+
+	@Config(config = "generators", category = "solarPanelHadron", key = "hadronNightRate", comment = "Generation rate during night for Hadron Solar Panel (Energy per tick)")
+	public static long hadronGenerationRateN = 524288;
+
+	@Config(config = "generators", category = "solarPanelQuark", key = "quarkDayRate", comment = "Generation rate during day for Quark Solar Panel (Energy per tick)")
+	public static long quarkGenerationRateD = 33554432;
+
+	@Config(config = "generators", category = "solarPanelQuark", key = "quarkNightRate", comment = "Generation rate during night for Quark Solar Panel (Energy per tick)")
+	public static long quarkGenerationRateN = 2097152;
 
 	@Config(config = "generators", category = "lightning_rod", key = "LightningRodMaxOutput", comment = "Lightning Rod Max Output (Energy per tick)")
-	public static int lightningRodMaxOutput = 2048;
+	public static long lightningRodMaxOutput = 2048;
 
 	@Config(config = "generators", category = "lightning_rod", key = "LightningRodMaxEnergy", comment = "Lightning Rod Max Energy")
-	public static int lightningRodMaxEnergy = 100_000_000;
+	public static long lightningRodMaxEnergy = 100_000_000;
 
 	@Config(config = "generators", category = "lightning_rod", key = "LightningRodChanceOfStrike", comment = "Chance of lightning striking a rod (Range: 0-70)")
-	public static int lightningRodChanceOfStrike = 24;
+	public static long lightningRodChanceOfStrike = 24;
 
 	@Config(config = "generators", category = "lightning_rod", key = "LightningRodBaseStrikeEnergy", comment = "Base amount of Energy per strike")
-	public static int lightningRodBaseEnergyStrike = 262_144;
+	public static long lightningRodBaseEnergyStrike = 262_144;
 
 	@Config(config = "generators", category = "thermal_generator", key = "ThermalGeneratorMaxOutput", comment = "Thermal Generator Max Output (Energy per tick)")
-	public static int thermalGeneratorMaxOutput = 128;
+	public static long thermalGeneratorMaxOutput = 128;
 
 	@Config(config = "generators", category = "thermal_generator", key = "ThermalGeneratorMaxEnergy", comment = "Thermal Generator Max Energy")
-	public static int thermalGeneratorMaxEnergy = 1_000_000;
+	public static long thermalGeneratorMaxEnergy = 1_000_000;
 
 	@Config(config = "generators", category = "thermal_generator", key = "ThermalGeneratorEnergyPerTick", comment = "Thermal Generator Energy Per Tick")
-	public static int thermalGeneratorEnergyPerTick = 16;
+	public static long thermalGeneratorEnergyPerTick = 16;
 
 	@Config(config = "generators", category = "plasma_generator", key = "PlasmaGeneratorMaxOutput", comment = "Plasma Generator Max Output (Energy per tick)")
-	public static int plasmaGeneratorMaxOutput = 2048;
+	public static long plasmaGeneratorMaxOutput = 2048;
 
 	@Config(config = "generators", category = "plasma_generator", key = "PlasmaGeneratorMaxEnergy", comment = "Plasma Generator Max Energy")
 	public static long plasmaGeneratorMaxEnergy = 500_000_000;
 
 	@Config(config = "generators", category = "plasma_generator", key = "PlasmaGeneratorEnergyPerTick", comment = "Plasma Generator Energy Per Tick")
-	public static int plasmaGeneratorEnergyPerTick = 400;
+	public static long plasmaGeneratorEnergyPerTick = 400;
 
 	@Config(config = "generators", category = "wind_mill", key = "WindMillMaxOutput", comment = "Wind Mill Max Output (Energy per tick)")
-	public static int windMillMaxOutput = 128;
+	public static long windMillMaxOutput = 128;
 
 	@Config(config = "generators", category = "wind_mill", key = "WindMillMaxEnergy", comment = "Wind Mill Max Energy")
-	public static int windMillMaxEnergy = 10_000;
+	public static long windMillMaxEnergy = 10_000;
 
 	@Config(config = "generators", category = "wind_mill", key = "WindMillEnergyPerTick", comment = "Wind Mill generation rate (Energy Per Tick)")
-	public static int windMillBaseEnergy = 2;
+	public static long windMillBaseEnergy = 2;
 
 	@Config(config = "generators", category = "wind_mill", key = "WindMillThunderMultiplier", comment = "Wind Mill Thunder Multiplier")
 	public static double windMillThunderMultiplier = 1.25;
 
 	@Config(config = "generators", category = "water_mill", key = "WaterMillMaxOutput", comment = "Water Mill Max Output (Energy per tick)")
-	public static int waterMillMaxOutput = 32;
+	public static long waterMillMaxOutput = 32;
 
 	@Config(config = "generators", category = "water_mill", key = "WaterMillMaxEnergy", comment = "Water Mill Max Energy")
-	public static int waterMillMaxEnergy = 1000;
+	public static long waterMillMaxEnergy = 1000;
 
 	@Config(config = "generators", category = "water_mill", key = "WaterMillEnergyPerTick", comment = "Water Mill generation rate per water block (Energy per tick)")
 	public static double waterMillEnergyMultiplier = 0.1;
 
 	@Config(config = "generators", category = "semifluid_generator", key = "SemifluidGeneratorMaxOutput", comment = "Semifluid Generator Max Output (Energy per tick)")
-	public static int semiFluidGeneratorMaxOutput = 128;
+	public static long semiFluidGeneratorMaxOutput = 128;
 
 	@Config(config = "generators", category = "semifluid_generator", key = "SemifluidGeneratorMaxEnergy", comment = "Semifluid Generator Max Energy")
-	public static int semiFluidGeneratorMaxEnergy = 1000000;
+	public static long semiFluidGeneratorMaxEnergy = 1000000;
 
 	@Config(config = "generators", category = "semifluid_generator", key = "SemifluidGeneratorEnergyPerTick", comment = "Semifluid Generator Energy Per Tick")
-	public static int semiFluidGeneratorEnergyPerTick = 8;
+	public static long semiFluidGeneratorEnergyPerTick = 8;
 
 	@Config(config = "generators", category = "gas_generator", key = "GasGeneratorMaxOutput", comment = "Gas Generator Max Output (Energy per tick)")
-	public static int gasTurbineMaxOutput = 128;
+	public static long gasTurbineMaxOutput = 128;
 
 	@Config(config = "generators", category = "gas_generator", key = "GasGeneratorMaxEnergy", comment = "Gas Generator Max Energy")
-	public static int gasTurbineMaxEnergy = 1000000;
+	public static long gasTurbineMaxEnergy = 1000000;
 
 	@Config(config = "generators", category = "gas_generator", key = "GasGeneratorEnergyPerTick", comment = "Gas Generator Energy Per Tick")
-	public static int gasTurbineEnergyPerTick = 16;
+	public static long gasTurbineEnergyPerTick = 16;
 
 	@Config(config = "generators", category = "diesel_generator", key = "DieselGeneratorMaxOutput", comment = "Diesel Generator Max Output (Energy per tick)")
-	public static int dieselGeneratorMaxOutput = 32;
+	public static long dieselGeneratorMaxOutput = 32;
 
 	@Config(config = "generators", category = "diesel_generator", key = "DieselGeneratorMaxEnergy", comment = "Diesel Generator Max Energy")
-	public static int dieselGeneratorMaxEnergy = 10_000;
+	public static long dieselGeneratorMaxEnergy = 10_000;
 
 	@Config(config = "generators", category = "diesel_generator", key = "DieselGeneratorEnergyPerTick", comment = "Diesel Generator Energy Per Tick")
-	public static int dieselGeneratorEnergyPerTick = 20;
+	public static long dieselGeneratorEnergyPerTick = 20;
 
 	@Config(config = "generators", category = "dragon_egg_siphoner", key = "DragonEggSiphonerMaxOutput", comment = "Dragon Egg Siphoner Max Output (Energy per tick)")
-	public static int dragonEggSyphonMaxOutput = 128;
+	public static long dragonEggSyphonMaxOutput = 128;
 
 	@Config(config = "generators", category = "dragon_egg_siphoner", key = "DragonEggSiphonerMaxEnergy", comment = "Dragon Egg Siphoner Max Energy")
-	public static int dragonEggSyphonMaxEnergy = 1000;
+	public static long dragonEggSyphonMaxEnergy = 1000;
 
 	@Config(config = "generators", category = "dragon_egg_siphoner", key = "DragonEggSiphonerEnergyPerTick", comment = "Dragon Egg Siphoner Energy Per Tick")
-	public static int dragonEggSyphonEnergyPerTick = 4;
+	public static long dragonEggSyphonEnergyPerTick = 4;
 
 	@Config(config = "generators", category = "generator", key = "GeneratorMaxOutput", comment = "Solid Fuel Generator Max Output (Energy per tick)")
-	public static int solidFuelGeneratorMaxOutput = 32;
+	public static long solidFuelGeneratorMaxOutput = 32;
 
 	@Config(config = "generators", category = "generator", key = "GeneratorMaxEnergy", comment = "Solid Fuel Generator Max Energy")
-	public static int solidFuelGeneratorMaxEnergy = 10_000;
+	public static long solidFuelGeneratorMaxEnergy = 10_000;
 
 	@Config(config = "generators", category = "generator", key = "GeneratorEnergyOutput", comment = "Solid Fuel Generator Energy Per Tick")
-	public static int solidFuelGeneratorOutputAmount = 10;
+	public static long solidFuelGeneratorOutputAmount = 10;
 
 	// Items
 	@Config(config = "items", category = "power", key = "nanoSaberCharge", comment = "Energy Capacity for Nano Saber")
-	public static int nanosaberCharge = 1_000_000;
+	public static long nanosaberCharge = 1_000_000;
 
 	@Config(config = "items", category = "power", key = "nanoSaberCost", comment = "Energy Cost for Nano Saber")
-	public static int nanosaberCost = 150;
+	public static long nanosaberCost = 150;
 
 	@Config(config = "items", category = "power", key = "nanoSaberDamage", comment = "Damage value for the Nano Saber")
-	public static int nanosaberDamage = 20;
+	public static long nanosaberDamage = 20;
 
 	@Config(config = "items", category = "power", key = "electricTreetapCharge", comment = "Energy Capacity for Electric Treetap")
-	public static int electricTreetapCharge = 10_000;
+	public static long electricTreetapCharge = 10_000;
 
 	@Config(config = "items", category = "power", key = "electricTreetapCost", comment = "Energy Cost for Electric Treetap")
-	public static int electricTreetapCost = 50;
+	public static long electricTreetapCost = 50;
 
 	@Config(config = "items", category = "power", key = "basicDrillCharge", comment = "Energy Capacity for Basic Drill")
-	public static int basicDrillCharge = 10_000;
+	public static long basicDrillCharge = 10_000;
 
 	@Config(config = "items", category = "power", key = "basicDrillCost", comment = "Energy Cost for Basic Drill")
-	public static int basicDrillCost = 50;
+	public static long basicDrillCost = 50;
 
 	@Config(config = "items", category = "power", key = "advancedDrillCharge", comment = "Energy Capacity for Advanced Drill")
-	public static int advancedDrillCharge = 100_000;
+	public static long advancedDrillCharge = 100_000;
 
 	@Config(config = "items", category = "power", key = "advancedDrillCost", comment = "Energy Cost for Advanced Drill")
-	public static int advancedDrillCost = 100;
+	public static long advancedDrillCost = 100;
 
 	@Config(config = "items", category = "power", key = "industrialDrillCharge", comment = "Energy Capacity for Industrial Drill")
-	public static int industrialDrillCharge = 1_000_000;
+	public static long industrialDrillCharge = 1_000_000;
 
 	@Config(config = "items", category = "power", key = "industrialDrillCost", comment = "Energy Cost for Industrial Drill")
-	public static int industrialDrillCost = 150;
+	public static long industrialDrillCost = 150;
 
 	@Config(config = "items", category = "power", key = "basicChainsawCharge", comment = "Energy Capacity for Basic Chainsaw")
-	public static int basicChainsawCharge = 10_000;
+	public static long basicChainsawCharge = 10_000;
 
 	@Config(config = "items", category = "power", key = "basicChainsawCost", comment = "Energy Cost for Basic Chainsaw")
-	public static int basicChainsawCost = 50;
+	public static long basicChainsawCost = 50;
 
 	@Config(config = "items", category = "power", key = "advancedChainsawCharge", comment = "Energy Capacity for Advanced Chainsaw")
-	public static int advancedChainsawCharge = 100_000;
+	public static long advancedChainsawCharge = 100_000;
 
 	@Config(config = "items", category = "power", key = "advancedChainsawCost", comment = "Energy Cost for Advanced Chainsaw")
-	public static int advancedChainsawCost = 100;
+	public static long advancedChainsawCost = 100;
 
 	@Config(config = "items", category = "power", key = "industrialChainsawCharge", comment = "Energy Capacity for Industrial Chainsaw")
-	public static int industrialChainsawCharge = 1_000_000;
+	public static long industrialChainsawCharge = 1_000_000;
 
 	@Config(config = "items", category = "power", key = "industrialChainsawCost", comment = "Energy Cost for Industrial Chainsaw")
-	public static int industrialChainsawCost = 150;
+	public static long industrialChainsawCost = 150;
 
 	@Config(config = "items", category = "power", key = "basicJackhammerCharge", comment = "Energy Capacity for Basic Jackhammer")
-	public static int basicJackhammerCharge = 10_000;
+	public static long basicJackhammerCharge = 10_000;
 
 	@Config(config = "items", category = "power", key = "basicJackhammerCost", comment = "Energy Cost for Basic Jackhammer")
-	public static int basicJackhammerCost = 50;
+	public static long basicJackhammerCost = 50;
 
 	@Config(config = "items", category = "power", key = "advancedJackhammerCharge", comment = "Energy Capacity for Advanced Jackhammer")
-	public static int advancedJackhammerCharge = 100_000;
+	public static long advancedJackhammerCharge = 100_000;
 
 	@Config(config = "items", category = "power", key = "advancedJackhammerCost", comment = "Energy Cost for Advanced Jackhammer")
-	public static int advancedJackhammerCost = 100;
+	public static long advancedJackhammerCost = 100;
 
 	@Config(config = "items", category = "power", key = "industrialJackhammerCharge", comment = "Energy Capacity for Industrial Jackhammer")
-	public static int industrialJackhammerCharge = 1_000_000;
+	public static long industrialJackhammerCharge = 1_000_000;
 
 	@Config(config = "items", category = "power", key = "industrialJackhammerCost", comment = "Energy Cost for Industrial Jackhammer")
-	public static int industrialJackhammerCost = 150;
+	public static long industrialJackhammerCost = 150;
 
 	@Config(config = "items", category = "power", key = "omniToolCharge", comment = "Energy Capacity for Omni Tool")
-	public static int omniToolCharge = 1_000_000;
+	public static long omniToolCharge = 1_000_000;
 
 	@Config(config = "items", category = "power", key = "omniToolCost", comment = "Energy Cost for Omni Tool")
-	public static int omniToolCost = 100;
+	public static long omniToolCost = 100;
 
 	@Config(config = "items", category = "power", key = "omniToolHitCost", comment = "Hit Energy Cost for Omni Tool")
-	public static int omniToolHitCost = 125;
+	public static long omniToolHitCost = 125;
 
 	@Config(config = "items", category = "power", key = "rockCutterCharge", comment = "Energy Capacity for Rock Cutter")
-	public static int rockCutterCharge = 10_000;
+	public static long rockCutterCharge = 10_000;
 
 	@Config(config = "items", category = "power", key = "rockCutterCost", comment = "Energy Cost for Rock Cutter")
-	public static int rockCutterCost = 10;
+	public static long rockCutterCost = 10;
 
 	@Config(config = "items", category = "power", key = "lapotronPackCharge", comment = "Energy Capacity for Lapotron Pack")
-	public static int lapotronPackCharge = 100_000_000;
+	public static long lapotronPackCharge = 100_000_000;
 
 	@Config(config = "items", category = "power", key = "LithiumBatpackCharge", comment = "Energy Capacity for Lithium Batpack")
-	public static int lithiumBatpackCharge = 600_000;
+	public static long lithiumBatpackCharge = 600_000;
 
 	@Config(config = "items", category = "power", key = "redCellBatteryMaxCharge", comment = "Energy Capacity for Red Cell Battery")
-	public static int redCellBatteryMaxCharge = 10_000;
+	public static long redCellBatteryMaxCharge = 10_000;
 
 	@Config(config = "items", category = "power", key = "lithiumIonBatteryMaxCharge", comment = "Energy Capacity for Lithium Ion Battery")
-	public static int lithiumIonBatteryMaxCharge = 100_000;
+	public static long lithiumIonBatteryMaxCharge = 100_000;
 
 	@Config(config = "items", category = "power", key = "energyCrystalMaxCharge", comment = "Energy Capacity for Energy Crystal")
-	public static int energyCrystalMaxCharge = 1_000_000;
+	public static long energyCrystalMaxCharge = 1_000_000;
 
 	@Config(config = "items", category = "power", key = "lapotronCrystalMaxCharge", comment = "Energy Capacity for Lapotron Crystal")
-	public static int lapotronCrystalMaxCharge = 10_000_000;
+	public static long lapotronCrystalMaxCharge = 10_000_000;
 
 	@Config(config = "items", category = "power", key = "lapotronicOrbMaxCharge", comment = "Energy Capacity for Lapotronic Orb")
-	public static int lapotronicOrbMaxCharge = 100_000_000;
+	public static long lapotronicOrbMaxCharge = 100_000_000;
 
 	@Config(config = "items", category = "power", key = "cloakingDeviceCharge", comment = "Energy Capacity for Cloaking Device")
 	public static long cloakingDeviceCharge = 40_000_000;
 
 	@Config(config = "items", category = "power", key = "clockingDeviceEnergyUsage", comment = "Cloaking device energy usage")
-	public static int cloakingDeviceCost = 10;
+	public static long cloakingDeviceCost = 10;
 
 	@Config(config = "items", category = "power", key = "quantumSuitCapacity", comment = "Quantum Suit Energy Capacity")
 	public static long quantumSuitCapacity = 40_000_000;
@@ -331,79 +379,79 @@ public class TechRebornConfig {
 
 	// Machines
 	@Config(config = "machines", category = "lesu", key = "LesuMaxEnergyPerBlock", comment = "LESU Max Energy Per Block")
-	public static int lesuStoragePerBlock = 1_000_000;
+	public static long lesuStoragePerBlock = 1_000_000;
 
 	@Config(config = "machines", category = "lesu", key = "LesuExtraIO", comment = "LESU Extra I/O Multiplier")
-	public static int lesuExtraIOPerBlock = 1;
+	public static long lesuExtraIOPerBlock = 1;
 
 	@Config(config = "machines", category = "lesu", key = "LesuBaseOutput", comment = "LESU Base Output")
-	public static int lesuBaseOutput = 5;
+	public static long lesuBaseOutput = 5;
 
 	@Config(config = "machines", category = "aesu", key = "AesuMaxEnergy", comment = "AESU Max Energy")
-	public static int aesuMaxEnergy = 100_000_000;
+	public static long aesuMaxEnergy = 100_000_000;
 
 	@Config(config = "machines", category = "player_detector", key = "PlayerDetectorMaxInput", comment = "Player Detector Max Input (Energy per tick)")
-	public static int playerDetectorMaxInput = 32;
+	public static long playerDetectorMaxInput = 32;
 
 	@Config(config = "machines", category = "player_detector", key = "PlayerDetectorMaxEnergy", comment = "Player Detector Max Energy")
-	public static int playerDetectorMaxEnergy = 10000;
+	public static long playerDetectorMaxEnergy = 10000;
 
 	@Config(config = "machines", category = "player_detector", key = "PlayerDetectorEnergyUsage", comment = "Player Detector Energy Consumption per second")
-	public static int playerDetectorEuPerTick = 1;
+	public static long playerDetectorEuPerTick = 1;
 
 	@Config(config = "machines", category = "player_detector", key = "PlayerDetectorMaxRadius", comment = "Player Detector maximum detection radius")
 	public static int playerDetectorMaxRadius = 128;
 
 	@Config(config = "machines", category = "Distillation_tower", key = "DistillationTowerMaxInput", comment = "Distillation Tower Max Input (Energy per tick)")
-	public static int distillationTowerMaxInput = 128;
+	public static long distillationTowerMaxInput = 128;
 
 	@Config(config = "machines", category = "Distillation_tower", key = "DistillationTowerMaxEnergy", comment = "Distillation Tower Max Energy")
-	public static int distillationTowerMaxEnergy = 10_000;
+	public static long distillationTowerMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "extractor", key = "ExtractorInput", comment = "Extractor Max Input (Energy per tick)")
-	public static int extractorMaxInput = 32;
+	public static long extractorMaxInput = 32;
 
 	@Config(config = "machines", category = "extractor", key = "ExtractorMaxEnergy", comment = "Extractor Max Energy")
-	public static int extractorMaxEnergy = 1_000;
+	public static long extractorMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "grinder", key = "GrinderInput", comment = "Grinder Max Input (Energy per tick)")
-	public static int grinderMaxInput = 32;
+	public static long grinderMaxInput = 32;
 
 	@Config(config = "machines", category = "grinder", key = "GrinderMaxEnergy", comment = "Grinder Max Energy")
-	public static int grinderMaxEnergy = 1_000;
+	public static long grinderMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "compressor", key = "CompressorInput", comment = "Compressor Max Input (Energy per tick)")
-	public static int compressorMaxInput = 32;
+	public static long compressorMaxInput = 32;
 
 	@Config(config = "machines", category = "compressor", key = "CompressorMaxEnergy", comment = "Compressor Max Energy")
-	public static int compressorMaxEnergy = 1000;
+	public static long compressorMaxEnergy = 1000;
 
 	@Config(config = "machines", category = "alloy_smelter", key = "AlloySmelterMaxInput", comment = "Alloy Smelter Max Input (Energy per tick)")
-	public static int alloySmelterMaxInput = 32;
+	public static long alloySmelterMaxInput = 32;
 
 	@Config(config = "machines", category = "alloy_smelter", key = "AlloySmelterMaxEnergy", comment = "Alloy Smelter Max Energy")
-	public static int alloySmelterMaxEnergy = 1_000;
+	public static long alloySmelterMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "rolling_machine", key = "RollingMachineMaxInput", comment = "Rolling Machine Max Input (Energy per tick)")
-	public static int rollingMachineMaxInput = 32;
+	public static long rollingMachineMaxInput = 32;
 
 	@Config(config = "machines", category = "rolling_machine", key = "RollingMachineMaxEnergy", comment = "Rolling Machine Max Energy")
-	public static int rollingMachineMaxEnergy = 10000;
+	public static long rollingMachineMaxEnergy = 10000;
 
 	@Config(config = "machines", category = "chunk_loader", key = "ChunkLoaderMaxRadius", comment = "Chunk Loader Max Radius")
 	public static int chunkLoaderMaxRadius = 5;
 
 	@Config(config = "machines", category = "assembling_machine", key = "AssemblingMachineMaxInput", comment = "Assembling Machine Max Input (Energy per tick)")
-	public static int assemblingMachineMaxInput = 128;
+	public static long assemblingMachineMaxInput = 128;
 
 	@Config(config = "machines", category = "assembling_machine", key = "AssemblingMachineMaxEnergy", comment = "Assembling Machine Max Energy")
-	public static int assemblingMachineMaxEnergy = 10_000;
+	public static long assemblingMachineMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "matter_fabricator", key = "MatterFabricatorMaxInput", comment = "Matter Fabricator Max Input (Energy per tick)")
-	public static int matterFabricatorMaxInput = 8192;
+	public static long matterFabricatorMaxInput = 8192;
 
 	@Config(config = "machines", category = "matter_fabricator", key = "MatterFabricatorMaxEnergy", comment = "Matter Fabricator Max Energy")
-	public static int matterFabricatorMaxEnergy = 10_000_000;
+	public static long matterFabricatorMaxEnergy = 10_000_000;
 
 	@Config(config = "machines", category = "matter_fabricator", key = "MatterFabricatorFabricationRate", comment = "Matter Fabricator Fabrication Rate, amount of amplifier units per UUM")
 	public static int matterFabricatorFabricationRate = 6_000;
@@ -412,52 +460,52 @@ public class TechRebornConfig {
 	public static int matterFabricatorEnergyPerAmp = 5;
 
 	@Config(config = "machines", category = "industrial_grinder", key = "IndustrialGrinderMaxInput", comment = "Industrial Grinder Max Input (Energy per tick)")
-	public static int industrialGrinderMaxInput = 128;
+	public static long industrialGrinderMaxInput = 128;
 
 	@Config(config = "machines", category = "industrial_grinder", key = "IndustrialGrinderMaxEnergy", comment = "Industrial Grinder Max Energy")
-	public static int industrialGrinderMaxEnergy = 10_000;
+	public static long industrialGrinderMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "vacuumfreezer", key = "VacuumFreezerInput", comment = "Vacuum Freezer Max Input (Energy per tick)")
-	public static int vacuumFreezerMaxInput = 64;
+	public static long vacuumFreezerMaxInput = 64;
 
 	@Config(config = "machines", category = "vacuumfreezer", key = "VacuumFreezerMaxEnergy", comment = "Vacuum Freezer Max Energy")
-	public static int vacuumFreezerMaxEnergy = 64_000;
+	public static long vacuumFreezerMaxEnergy = 64_000;
 
 	@Config(config = "machines", category = "implosion_compressor", key = "ImplosionCompressorMaxInput", comment = "Implosion Compressor Max Input (Energy per tick)")
-	public static int implosionCompressorMaxInput = 64;
+	public static long implosionCompressorMaxInput = 64;
 
 	@Config(config = "machines", category = "implosion_compressor", key = "ImplosionCompressorMaxEnergy", comment = "Implosion Compressor Max Energy")
-	public static int implosionCompressorMaxEnergy = 64_000;
+	public static long implosionCompressorMaxEnergy = 64_000;
 
 	@Config(config = "machines", category = "industrial_furnace", key = "IndustrialFurnaceMaxInput", comment = "Industrial Blast Furnace Max Input (Energy per tick)")
-	public static int industrialBlastFurnaceMaxInput = 128;
+	public static long industrialBlastFurnaceMaxInput = 128;
 
 	@Config(config = "machines", category = "industrial_furnace", key = "IndustrialFurnaceMaxEnergy", comment = "Industrial Blast Furnace Max Energy")
-	public static int industrialBlastFurnaceMaxEnergy = 40_000;
+	public static long industrialBlastFurnaceMaxEnergy = 40_000;
 
 	@Config(config = "machines", category = "industrial_sawmill", key = "IndustrialSawmillMaxInput", comment = "Industrial Sawmill Max Input (Energy per tick)")
-	public static int industrialSawmillMaxInput = 128;
+	public static long industrialSawmillMaxInput = 128;
 
 	@Config(config = "machines", category = "industrial_sawmill", key = "IndustrialSawmillMaxEnergy", comment = "Industrial Sawmill Max Energy")
-	public static int industrialSawmillMaxEnergy = 10_000;
+	public static long industrialSawmillMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "autocrafter", key = "AutoCrafterInput", comment = "AutoCrafting Table Max Input (Energy per tick)")
-	public static int autoCraftingTableMaxInput = 32;
+	public static long autoCraftingTableMaxInput = 32;
 
 	@Config(config = "machines", category = "autocrafter", key = "AutoCrafterMaxEnergy", comment = "AutoCrafting Table Max Energy")
-	public static int autoCraftingTableMaxEnergy = 10_000;
+	public static long autoCraftingTableMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "fluidreplicator", key = "FluidReplicatorMaxInput", comment = "Fluid Replicator Max Input (Energy per tick)")
-	public static int fluidReplicatorMaxInput = 256;
+	public static long fluidReplicatorMaxInput = 256;
 
 	@Config(config = "machines", category = "fluidreplicator", key = "FluidReplicatorMaxEnergy", comment = "Fluid Replicator Max Energy")
-	public static int fluidReplicatorMaxEnergy = 400_000;
+	public static long fluidReplicatorMaxEnergy = 400_000;
 
 	@Config(config = "machines", category = "electric_furnace", key = "ElectricFurnaceInput", comment = "Electric Furnace Max Input (Energy per tick)")
-	public static int electricFurnaceMaxInput = 32;
+	public static long electricFurnaceMaxInput = 32;
 
 	@Config(config = "machines", category = "electric_furnace", key = "ElectricFurnaceMaxEnergy", comment = "Electric Furnace Max Energy")
-	public static int electricFurnaceMaxEnergy = 1000;
+	public static long electricFurnaceMaxEnergy = 1000;
 
 	@Config(config = "machines", category = "storage", key = "CrudeStorageUnitMaxStorage", comment = "Maximum amount of items a Crude Storage Unit can store")
 	public static int crudeStorageUnitMaxStorage = 1 << 11; // 2^11, around 2,000, holds 2^5=32 64-stacks
@@ -487,52 +535,52 @@ public class TechRebornConfig {
 	public static int quantumTankUnitCapacity = Integer.MAX_VALUE / 1000;
 
 	@Config(config = "machines", category = "charge_bench", key = "ChargeBenchMaxOutput", comment = "Charge Bench Max Output (Energy per tick)")
-	public static int chargeOMatBMaxOutput = 512;
+	public static long chargeOMatBMaxOutput = 512;
 
 	@Config(config = "machines", category = "charge_bench", key = "ChargeBenchMaxInput", comment = "Charge Bench Max Input (Energy per tick)")
-	public static int chargeOMatBMaxInput = 512;
+	public static long chargeOMatBMaxInput = 512;
 
 	@Config(config = "machines", category = "charge_bench", key = "ChargeBenchMaxEnergy", comment = "Charge Bench Max Energy")
-	public static int chargeOMatBMaxEnergy = 100_000_000;
+	public static long chargeOMatBMaxEnergy = 100_000_000;
 
 	@Config(config = "machines", category = "industrial_electrolyzer", key = "IndustrialElectrolyzerMaxInput", comment = "Industrial Electrolyzer Max Input (Energy per tick)")
-	public static int industrialElectrolyzerMaxInput = 128;
+	public static long industrialElectrolyzerMaxInput = 128;
 
 	@Config(config = "machines", category = "industrial_electrolyzer", key = "IndustrialElectrolyzerMaxEnergy", comment = "Industrial Electrolyzer Max Energy")
-	public static int industrialElectrolyzerMaxEnergy = 10_000;
+	public static long industrialElectrolyzerMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "centrifuge", key = "CentrifugeMaxInput", comment = "Centrifuge Max Input (Energy per tick)")
-	public static int industrialCentrifugeMaxInput = 32;
+	public static long industrialCentrifugeMaxInput = 32;
 
 	@Config(config = "machines", category = "centrifuge", key = "CentrifugeMaxEnergy", comment = "Centrifuge Max Energy")
-	public static int industrialCentrifugeMaxEnergy = 10_000;
+	public static long industrialCentrifugeMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "chemical_reactor", key = "ChemicalReactorMaxInput", comment = "Chemical Reactor Max Input (Energy per tick)")
-	public static int chemicalReactorMaxInput = 128;
+	public static long chemicalReactorMaxInput = 128;
 
 	@Config(config = "machines", category = "chemical_reactor", key = "ChemicalReactorMaxEnergy", comment = "Chemical Reactor Max Energy")
-	public static int chemicalReactorMaxEnergy = 10_000;
+	public static long chemicalReactorMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "idsu", key = "IdsuMaxEnergy", comment = "IDSU Max Energy")
-	public static int idsuMaxEnergy = 1_000_000_000;
+	public static long idsuMaxEnergy = 1_000_000_000;
 
 	@Config(config = "machines", category = "fusion_reactor", key = "FusionReactorMaxInput", comment = "Fusion Reactor Max Input (Energy per tick)")
-	public static int fusionControlComputerMaxInput = 8192;
+	public static long fusionControlComputerMaxInput = 8192;
 
 	@Config(config = "machines", category = "fusion_reactor", key = "FusionReactorMaxOutput", comment = "Fusion Reactor Max Output (Energy per tick)")
-	public static int fusionControlComputerMaxOutput = 1_000_000;
+	public static long fusionControlComputerMaxOutput = 1_000_000;
 
 	@Config(config = "machines", category = "fusion_reactor", key = "FusionReactorMaxEnergy", comment = "Fusion Reactor Max Energy")
-	public static int fusionControlComputerMaxEnergy = 100_000_000;
+	public static long fusionControlComputerMaxEnergy = 100_000_000;
 
 	@Config(config = "machines", category = "fusion_reactor", key = "FusionReactorMaxCoilSize", comment = "Fusion Reactor Max Coil size (Radius)")
 	public static int fusionControlComputerMaxCoilSize = 50;
 
 	@Config(config = "machines", category = "recycler", key = "RecyclerInput", comment = "Recycler Max Input (Energy per tick)")
-	public static int recyclerMaxInput = 32;
+	public static long recyclerMaxInput = 32;
 
 	@Config(config = "machines", category = "recycler", key = "RecyclerMaxEnergy", comment = "Recycler Max Energy")
-	public static int recyclerMaxEnergy = 1000;
+	public static long recyclerMaxEnergy = 1000;
 
 	@Config(config = "machines", category = "recycler", key = "RecyclerChance", comment = "Recycler Chance to produce scrap (1 out of chance)")
 	public static int recyclerChance = 6;
@@ -541,16 +589,16 @@ public class TechRebornConfig {
 	public static List<String> recyclerBlackList = Arrays.asList("techreborn:scrap_box", "techreborn:scrap");
 
 	@Config(config = "machines", category = "scrapboxinator", key = "ScrapboxinatorMaxInput", comment = "Scrapboxinator Max Input (Energy per tick)")
-	public static int scrapboxinatorMaxInput = 32;
+	public static long scrapboxinatorMaxInput = 32;
 
 	@Config(config = "machines", category = "scrapboxinator", key = "ScrapboxinatorMaxEnergy", comment = "Scrapboxinator Max Energy")
-	public static int scrapboxinatorMaxEnergy = 1_000;
+	public static long scrapboxinatorMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "solid_canning_machine", key = "solidCanningMachineMaxInput", comment = "Solid Canning Machine Max Input (Energy per tick)")
-	public static int solidCanningMachineMaxInput = 32;
+	public static long solidCanningMachineMaxInput = 32;
 
 	@Config(config = "machines", category = "solid_canning_machine", key = "solidCanningMachineMaxEnergy", comment = "Solid Canning Machine Max Energy")
-	public static int solidCanningMachineMaxEnergy = 1_000;
+	public static long solidCanningMachineMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "iron_machine", key = "fuel_scale", comment = "Multiplier for vanilla furnace item burn time")
 	public static double fuelScale = 1.25;
@@ -559,52 +607,52 @@ public class TechRebornConfig {
 	public static double cookingScale = 1.25;
 
 	@Config(config = "machines", category = "greenhouse_controller", key = "GreenhouseControllerMaxInput", comment = "Greenhouse Controller Max Input (Energy per tick)")
-	public static int greenhouseControllerMaxInput = 32;
+	public static long greenhouseControllerMaxInput = 32;
 
 	@Config(config = "machines", category = "greenhouse_controller", key = "GreenhouseControllerMaxEnergy", comment = "Greenhouse Controller Max Energy")
-	public static int greenhouseControllerMaxEnergy = 1_000;
+	public static long greenhouseControllerMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "greenhouse_controller", key = "GreenhouseControllerEnergyPerTick", comment = "Greenhouse Controller Energy usage Per Tick")
-	public static int greenhouseControllerEnergyPerTick = 2;
+	public static long greenhouseControllerEnergyPerTick = 2;
 
 	@Config(config = "machines", category = "greenhouse_controller", key = "GreenhouseControllerEnergyPerHarvest", comment = "Greenhouse Controller Energy usage Per Harvest")
-	public static int greenhouseControllerEnergyPerHarvest = 100;
+	public static long greenhouseControllerEnergyPerHarvest = 100;
 
 	@Config(config = "machines", category = "greenhouse_controller", key = "GreenhouseControllerEnergyPerBonemeal", comment = "Greenhouse Controller Energy usage Per Bonemeal")
-	public static int greenhouseControllerEnergyPerBonemeal = 50;
+	public static long greenhouseControllerEnergyPerBonemeal = 50;
 
 	@Config(config = "machines", category = "drain", key = "TicksUntilNextDrainAttempt", comment = "How many ticks should go between two drain attempts. 0 or negative will disable drain.")
 	public static int ticksUntilNextDrainAttempt = 10;
 
 	@Config(config = "machines", category = "block_breaker", key = "BlockBreakerMaxInput", comment = "Block Breaker Max Input (Energy per tick)")
-	public static int blockBreakerMaxInput = 32;
+	public static long blockBreakerMaxInput = 32;
 
 	@Config(config = "machines", category = "block_breaker", key = "BlockBreakerMaxEnergy", comment = "Block Breaker Max Energy")
-	public static int blockBreakerMaxEnergy = 1_000;
+	public static long blockBreakerMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "block_breaker", key = "BlockBreakerEnergyPerTick", comment = "Block Breaker Energy usage Per Tick")
-	public static int blockBreakerEnergyPerTick = 5;
+	public static long blockBreakerEnergyPerTick = 5;
 
 	@Config(config = "machines", category = "block_breaker", key = "BlockBreakerBaseBreakTime", comment = "How many ticks a block of hardness 1 requires to be broken")
 	public static int blockBreakerBaseBreakTime = 100;
 
 	@Config(config = "machines", category = "block_placer", key = "BlockPlacerMaxInput", comment = "Block Placer Max Input (Energy per tick)")
-	public static int blockPlacerMaxInput = 32;
+	public static long blockPlacerMaxInput = 32;
 
 	@Config(config = "machines", category = "block_placer", key = "BlockPlacerMaxEnergy", comment = "Block Placer Max Energy")
-	public static int blockPlacerMaxEnergy = 1_000;
+	public static long blockPlacerMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "block_placer", key = "BlockPlacerEnergyPerTick", comment = "Block Placer Energy usage Per Tick")
-	public static int blockPlacerEnergyPerTick = 5;
+	public static long blockPlacerEnergyPerTick = 5;
 
 	@Config(config = "machines", category = "block_placer", key = "BlockPlacerBaseBreakTime", comment = "How many ticks a block of hardness 1 requires to be placed")
 	public static int blockPlacerBaseBreakTime = 100;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadMaxInput", comment = "Launchpad Max Input (Energy per tick)")
-	public static int launchpadMaxInput = 128;
+	public static long launchpadMaxInput = 128;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadMaxEnergy", comment = "Launchpad Max Energy")
-	public static int launchpadMaxEnergy = 40_000;
+	public static long launchpadMaxEnergy = 40_000;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadSpeedLow", comment = "Launchpad Low Speed")
 	public static double launchpadSpeedLow = 1d;
@@ -619,16 +667,16 @@ public class TechRebornConfig {
 	public static double launchpadSpeedExtreme = 10d;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadEnergyLow", comment = "Launchpad Low Energy")
-	public static int launchpadEnergyLow = 1_000;
+	public static long launchpadEnergyLow = 1_000;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadEnergyMedium", comment = "Launchpad Medium Energy")
-	public static int launchpadEnergyMedium = 6_000;
+	public static long launchpadEnergyMedium = 6_000;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadEnergyHigh", comment = "Launchpad High Energy")
-	public static int launchpadEnergyHigh = 10_000;
+	public static long launchpadEnergyHigh = 10_000;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadEnergyExtreme", comment = "Launchpad Extreme Energy")
-	public static int launchpadEnergyExtreme = 20_000;
+	public static long launchpadEnergyExtreme = 20_000;
 
 	@Config(config = "machines", category = "launchpad", key = "LaunchpadDefaultSelection", comment = "Launchpad Default Selection (0-3 for Low-Extreme)")
 	public static int launchpadDefaultSelection = 0;
@@ -637,40 +685,40 @@ public class TechRebornConfig {
 	public static int launchpadInterval = 100; // 5 seconds
 
 	@Config(config = "machines", category = "elevator", key = "ElevatorMaxInput", comment = "Elevator Max Input (Energy per tick)")
-	public static int elevatorMaxInput = 32;
+	public static long elevatorMaxInput = 32;
 
 	@Config(config = "machines", category = "elevator", key = "ElevatorMaxEnergy", comment = "Elevator Max Energy")
-	public static int elevatorMaxEnergy = 1_000;
+	public static long elevatorMaxEnergy = 1_000;
 
 	@Config(config = "machines", category = "elevator", key = "ElevatorEnergyPerBlock", comment = "Elevator Energy used per vertical block of transportation")
-	public static int elevatorEnergyPerBlock = 2;
+	public static long elevatorEnergyPerBlock = 2;
 
 	@Config(config = "machines", category = "elevator", key = "AllowElevatingThroughBlocks", comment = "Allow elevating through blocks (i.e. non air)")
 	public static boolean allowElevatingThroughBlocks = true;
 
 	@Config(config = "machines", category = "fishing_station", key = "FishingStationMaxInput", comment = "Fishing Station Max Input (Energy per tick)")
-	public static int fishingStationMaxInput = 128;
+	public static long fishingStationMaxInput = 128;
 
 	@Config(config = "machines", category = "fishing_station", key = "FishingStationMaxEnergy", comment = "Fishing Station Max Energy")
-	public static int fishingStationMaxEnergy = 10_000;
+	public static long fishingStationMaxEnergy = 10_000;
 
 	@Config(config = "machines", category = "fishing_station", key = "FishingStationEnergyPerCatch", comment = "How much energy the Fishing Station uses per catch")
-	public static int fishingStationEnergyPerCatch = 500;
+	public static long fishingStationEnergyPerCatch = 500;
 
 	@Config(config = "machines", category = "fishing_station", key = "FishingStationInterval", comment = "Fishing Station Catch Interval in Ticks > 0")
-	public static int fishingStationInterval = 400; // 20 seconds
+	public static long fishingStationInterval = 400; // 20 seconds
 
 	@Config(config = "machines", category = "pump", key = "PumpTicksToComplete", comment = "How many ticks it takes to pump a source block.")
-	public static int pumpTicksToComplete = 100;
+	public static long pumpTicksToComplete = 100;
 
 	@Config(config = "machines", category = "pump", key = "PumpMaxInput", comment = "Pump Max Input (Energy per tick)")
-	public static int pumpMaxInput = 128;
+	public static long pumpMaxInput = 128;
 
 	@Config(config = "machines", category = "pump", key = "PumpMaxEnergy", comment = "Pump Max Energy")
-	public static int pumpMaxEnergy = 40_000;
+	public static long pumpMaxEnergy = 40_000;
 
 	@Config(config = "machines", category = "pump", key = "PumpEnergyToCollect", comment = "Base amount of Energy to collect a block of fluid")
-	public static int pumpEnergyToCollect = 1_000;
+	public static long pumpEnergyToCollect = 1_000;
 
 	@Config(config = "machines", category = "pump", key = "PumpIterateOutwards", comment = "If true then the pump will collect closest fluid and scan outwards")
 	public static boolean pumpIterateOutwards = false;
@@ -701,7 +749,7 @@ public class TechRebornConfig {
 	public static int sapTimeTicks = 80;
 
 	@Config(config = "misc", category = "resin_basin", key = "SapCheckTime", comment = "How often to check for sap (will check if world time % this number is zero)")
-	public static int checkForSapTime = 50;
+	public static long checkForSapTime = 50;
 
 	@Config(config = "misc", category = "general", key = "DispenserScrapbox", comment = "Dispensers will open scrapboxes")
 	public static boolean dispenseScrapboxes = true;

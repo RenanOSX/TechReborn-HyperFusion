@@ -72,7 +72,7 @@ public class GuiIDSU extends GuiBase<BuiltScreenHandler> {
 
 		matrices.pop();
 
-		builder.drawMultiEnergyBar(drawContext, this, 81, 28, (int) idsu.getEnergy(), (int) idsu.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 81, 28, idsu.getEnergy(), idsu.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 
 }

@@ -46,19 +46,19 @@ import techreborn.init.TRContent;
 public class AdjustableSUBlockEntity extends EnergyStorageBlockEntity implements BuiltScreenHandlerProvider {
 
 	public RebornInventory<AdjustableSUBlockEntity> inventory = new RebornInventory<>(4, "AdjustableSUBlockEntity", 64, this);
-	private int OUTPUT = 64; // The current output
-	public int superconductors = 0;
+	private long OUTPUT = 64; // The current output
+	public long superconductors = 0;
 
 	public AdjustableSUBlockEntity(BlockPos pos, BlockState state) {
-		super(TRBlockEntities.ADJUSTABLE_SU, pos, state, "ADJUSTABLE_SU", 4, TRContent.Machine.ADJUSTABLE_SU.block, RcEnergyTier.INSANE, TechRebornConfig.aesuMaxEnergy);
+		super(TRBlockEntities.ADJUSTABLE_SU, pos, state, "ADJUSTABLE_SU", 4, TRContent.Machine.ADJUSTABLE_SU.block, RcEnergyTier.IV, TechRebornConfig.aesuMaxEnergy);
 	}
 
-	public int getMaxConfigOutput() {
-		int extra = 0;
+	public long getMaxConfigOutput() {
+		long extra = 0;
 		if (superconductors > 0) {
-			extra = (int) Math.pow(2, (superconductors + 2)) * maxOutput;
+			extra = (long) Math.pow(2, (superconductors + 2)) * maxOutput;
 		}
-		return maxOutput + extra;
+		return (int) (maxOutput + extra);
 	}
 
 	public void handleGuiInputFromClient(int id, boolean shift, boolean ctrl) {
@@ -143,7 +143,7 @@ public class AdjustableSUBlockEntity extends EnergyStorageBlockEntity implements
 	@Override
 	public void writeNbt(NbtCompound tagCompound) {
 		super.writeNbt(tagCompound);
-		tagCompound.putInt("output", OUTPUT);
+		tagCompound.putLong("output", OUTPUT);
 	}
 
 	@Override
@@ -166,11 +166,11 @@ public class AdjustableSUBlockEntity extends EnergyStorageBlockEntity implements
 			.syncEnergyValue().sync(this::getCurrentOutput, this::setCurrentOutput).addInventory().create(this, syncID);
 	}
 
-	public int getCurrentOutput() {
+	public long getCurrentOutput() {
 		return OUTPUT;
 	}
 
-	public void setCurrentOutput(int output) {
+	public void setCurrentOutput(long output) {
 		this.OUTPUT = output;
 	}
 }

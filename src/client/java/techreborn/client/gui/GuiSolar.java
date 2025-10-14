@@ -45,7 +45,7 @@ public class GuiSolar extends GuiBase<BuiltScreenHandler> {
 		super.drawForeground(drawContext, mouseX, mouseY);
 		final GuiBase.Layer layer = GuiBase.Layer.FOREGROUND;
 
-		builder.drawMultiEnergyBar(drawContext, this, 156, 19, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 156, 19, blockEntity.getEnergy(), blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 
 		if (!blockEntity.isGenerating()) {
 			builder.drawText(drawContext, this, Text.translatable("techreborn.message.panel_blocked"), 10, 20, 12066591);

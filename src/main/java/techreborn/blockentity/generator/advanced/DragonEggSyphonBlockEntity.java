@@ -52,7 +52,7 @@ public class DragonEggSyphonBlockEntity extends PowerAcceptorBlockEntity
 		super(TRBlockEntities.DRAGON_EGG_SYPHON, pos, state);
 	}
 
-	private boolean tryAddingEnergy(int amount) {
+	private boolean tryAddingEnergy(long amount) {
 		if (getFreeSpace() > 0) {
 			addEnergy(amount);
 			return true;

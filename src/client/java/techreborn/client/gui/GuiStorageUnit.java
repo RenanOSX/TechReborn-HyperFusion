@@ -63,7 +63,7 @@ public class GuiStorageUnit extends GuiBase<BuiltScreenHandler> {
 		builder.drawText(drawContext, this, Text.translatable("gui.techreborn.unit.out"), 140, 43, 4210752);
 
 
-		int storedAmount = storageEntity.storedAmount;
+		long storedAmount = storageEntity.storedAmount;
 
 		if (storedAmount == 0 && !storageEntity.isLocked()) {
 

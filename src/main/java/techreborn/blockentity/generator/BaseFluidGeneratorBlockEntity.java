@@ -49,7 +49,7 @@ import techreborn.api.generator.FluidGeneratorRecipe;
 public abstract class BaseFluidGeneratorBlockEntity extends PowerAcceptorBlockEntity implements IToolDrop, InventoryProvider {
 
 	private final RecipeType<FluidGeneratorRecipe> recipeType;
-	private final int euTick;
+	private final long euTick;
 	private FluidGeneratorRecipe currentRecipe;
 	private int ticksSinceLastChange;
 	public final Tank tank;
@@ -63,7 +63,7 @@ public abstract class BaseFluidGeneratorBlockEntity extends PowerAcceptorBlockEn
 	 */
 	double pendingWithdraw = 0.0;
 
-	public BaseFluidGeneratorBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, EFluidGenerator type, String blockEntityName, FluidValue tankCapacity, int euTick) {
+	public BaseFluidGeneratorBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, EFluidGenerator type, String blockEntityName, FluidValue tankCapacity, long euTick) {
 		super(blockEntityType, pos, state);
 		recipeType = type.getType();
 		tank = new Tank(blockEntityName, tankCapacity, this);
@@ -136,7 +136,7 @@ public abstract class BaseFluidGeneratorBlockEntity extends PowerAcceptorBlockEn
 		return 0;
 	}
 
-	protected boolean tryAddingEnergy(int amount) {
+	protected boolean tryAddingEnergy(long amount) {
 		if (getFreeSpace() > 0) {
 			addEnergy(amount);
 			return true;

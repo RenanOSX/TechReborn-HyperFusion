@@ -48,7 +48,7 @@ import java.util.Set;
  * @author drcrazy
  */
 public class ToolsUtil {
-	public static void breakBlock(ItemStack tool, World world, BlockPos pos, LivingEntity entityLiving, int cost) {
+	public static void breakBlock(ItemStack tool, World world, BlockPos pos, LivingEntity entityLiving, long cost) {
 		if (!(entityLiving instanceof PlayerEntity)) {
 			return;
 		}

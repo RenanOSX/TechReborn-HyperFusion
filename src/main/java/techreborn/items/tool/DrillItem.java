@@ -41,14 +41,14 @@ import reborncore.common.util.ItemUtils;
 import techreborn.init.TRContent;
 
 public class DrillItem extends MiningToolItem implements RcEnergyItem {
-	public final int maxCharge;
-	public final int cost;
+	public final long maxCharge;
+	public final long cost;
 	public final float poweredSpeed;
 	public final float unpoweredSpeed;
 	public final int miningLevel;
 	public final RcEnergyTier tier;
 
-	public DrillItem(ToolMaterial material, int energyCapacity, RcEnergyTier tier, int cost, float poweredSpeed, float unpoweredSpeed, MiningLevel miningLevel) {
+	public DrillItem(ToolMaterial material, long energyCapacity, RcEnergyTier tier, long cost, float poweredSpeed, float unpoweredSpeed, MiningLevel miningLevel) {
 		// combat stats same as for diamond pickaxe. Fix for #2468
 		super(1, -2.8F, material, TRContent.BlockTags.DRILL_MINEABLE, new Item.Settings().maxCount(1).maxDamage(-1));
 		this.maxCharge = energyCapacity;

@@ -73,8 +73,8 @@ public class StackToolTipHandler implements ItemTooltipCallback {
 				line2.append(I18n.translate("reborncore.gui.tooltip.power_charged"));
 				tooltipLines.add(2, line2);
 
-				double inputRate = energyItem.getEnergyMaxInput();
-				double outputRate = energyItem.getEnergyMaxOutput();
+				long inputRate = energyItem.getEnergyMaxInput();
+				long outputRate = energyItem.getEnergyMaxOutput();
 
 				MutableText line3 = Text.literal("");
 				if (inputRate != 0 && inputRate == outputRate){
@@ -124,7 +124,7 @@ public class StackToolTipHandler implements ItemTooltipCallback {
 		}
 	}
 
-	private int percentage(double CurrentValue, double MaxValue) {
+	private int percentage(long CurrentValue, long MaxValue) {
 		if (CurrentValue == 0)
 			return 0;
 		return (int) ((CurrentValue * 100.0f) / MaxValue);

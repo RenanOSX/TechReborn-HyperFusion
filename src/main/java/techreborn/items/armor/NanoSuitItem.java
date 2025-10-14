@@ -58,7 +58,7 @@ public class NanoSuitItem extends TREnergyArmourItem implements ArmorBlockEntity
 	private final Multimap<EntityAttribute, EntityAttributeModifier> fullSuitAttributes;
 
 	public NanoSuitItem(ArmorMaterial material, Type slot) {
-		super(material, slot, TechRebornConfig.nanoSuitCapacity, RcEnergyTier.HIGH);
+		super(material, slot, TechRebornConfig.nanoSuitCapacity, RcEnergyTier.HV);
 		switch (slot) {
 			case HELMET, BOOTS:
 				noPowerAttributes = new AttributeModifierBuilder(slot).armor(1).build();

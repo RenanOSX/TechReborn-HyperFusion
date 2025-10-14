@@ -40,7 +40,7 @@ import techreborn.init.TRContent;
 public class LowVoltageSUBlockEntity extends EnergyStorageBlockEntity implements BuiltScreenHandlerProvider {
 
 	public LowVoltageSUBlockEntity(BlockPos pos, BlockState state) {
-		super(TRBlockEntities.LOW_VOLTAGE_SU, pos, state, "BatBox", 2, TRContent.Machine.LOW_VOLTAGE_SU.block, RcEnergyTier.LOW, 40_000);
+		super(TRBlockEntities.LOW_VOLTAGE_SU, pos, state, "BatBox", 2, TRContent.Machine.LOW_VOLTAGE_SU.block, RcEnergyTier.LV, 40_000);
 	}
 
 	@Override

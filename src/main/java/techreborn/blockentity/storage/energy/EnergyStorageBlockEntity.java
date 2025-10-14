@@ -49,11 +49,11 @@ public class EnergyStorageBlockEntity extends PowerAcceptorBlockEntity implement
 	public final RebornInventory<EnergyStorageBlockEntity> inventory;
 	public final String name;
 	public final Block wrenchDrop;
-	public int maxInput;
-	public int maxOutput;
-	public int maxStorage;
+	public long maxInput;
+	public long maxOutput;
+	public long maxStorage;
 
-	public EnergyStorageBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, int invSize, Block wrenchDrop, RcEnergyTier tier, int maxStorage) {
+	public EnergyStorageBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, int invSize, Block wrenchDrop, RcEnergyTier tier, long maxStorage) {
 		super(blockEntityType, pos, state);
 		inventory = new RebornInventory<>(invSize, name + "BlockEntity", 64, this);
 		this.wrenchDrop = wrenchDrop;

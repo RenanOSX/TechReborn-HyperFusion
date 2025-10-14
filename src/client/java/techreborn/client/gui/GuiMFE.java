@@ -70,6 +70,6 @@ public class GuiMFE extends GuiBase<BuiltScreenHandler> {
 			matrices.pop();
 		}
 
-		builder.drawMultiEnergyBar(drawContext, this, 81, 28, (int) mfe.getEnergy(), (int) mfe.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 81, 28, mfe.getEnergy(), mfe.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 }

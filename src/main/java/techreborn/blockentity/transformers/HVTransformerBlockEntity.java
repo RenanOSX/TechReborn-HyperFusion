@@ -36,7 +36,7 @@ import techreborn.init.TRContent;
 public class HVTransformerBlockEntity extends TransformerBlockEntity {
 
 	public HVTransformerBlockEntity(BlockPos pos, BlockState state) {
-		super(TRBlockEntities.HV_TRANSFORMER, pos, state, "HVTransformer", TRContent.Machine.HV_TRANSFORMER.block, RcEnergyTier.EXTREME);
+		super(TRBlockEntities.HV_TRANSFORMER, pos, state, "HVTransformer", TRContent.Machine.HV_TRANSFORMER.block, RcEnergyTier.EV);
 	}
 
 }

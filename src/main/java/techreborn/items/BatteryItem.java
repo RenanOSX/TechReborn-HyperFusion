@@ -43,10 +43,10 @@ import java.util.List;
 
 public class BatteryItem extends Item implements RcEnergyItem {
 
-	private final int maxEnergy;
+	private final long maxEnergy;
 	private final RcEnergyTier tier;
 
-	public BatteryItem(int maxEnergy, RcEnergyTier tier) {
+	public BatteryItem(long maxEnergy, RcEnergyTier tier) {
 		super(new Item.Settings().maxCount(1));
 		this.maxEnergy = maxEnergy;
 		this.tier = tier;

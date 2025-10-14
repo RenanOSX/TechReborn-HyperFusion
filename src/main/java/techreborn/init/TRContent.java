@@ -308,25 +308,33 @@ public class TRContent {
 	}
 
 	public enum SolarPanels implements ItemConvertible {
-		BASIC(RcEnergyTier.MICRO, TechRebornConfig.basicGenerationRateD, TechRebornConfig.basicGenerationRateN),
-		ADVANCED(RcEnergyTier.LOW, TechRebornConfig.advancedGenerationRateD, TechRebornConfig.advancedGenerationRateN),
-		INDUSTRIAL(RcEnergyTier.MEDIUM, TechRebornConfig.industrialGenerationRateD, TechRebornConfig.industrialGenerationRateN),
-		ULTIMATE(RcEnergyTier.HIGH, TechRebornConfig.ultimateGenerationRateD, TechRebornConfig.ultimateGenerationRateN),
-		QUANTUM(RcEnergyTier.EXTREME, TechRebornConfig.quantumGenerationRateD, TechRebornConfig.quantumGenerationRateN),
+		BASIC(RcEnergyTier.LV, TechRebornConfig.basicGenerationRateD, TechRebornConfig.basicGenerationRateN),
+		ADVANCED(RcEnergyTier.MV, TechRebornConfig.advancedGenerationRateD, TechRebornConfig.advancedGenerationRateN),
+		INDUSTRIAL(RcEnergyTier.HV, TechRebornConfig.industrialGenerationRateD, TechRebornConfig.industrialGenerationRateN),
+		ULTIMATE(RcEnergyTier.EV, TechRebornConfig.ultimateGenerationRateD, TechRebornConfig.ultimateGenerationRateN),
+		QUANTUM(RcEnergyTier.IV, TechRebornConfig.quantumGenerationRateD, TechRebornConfig.quantumGenerationRateN),
+		SPECTRAL(RcEnergyTier.LUV, TechRebornConfig.spectralGenerationRateD, TechRebornConfig.spectralGenerationRateN),
+		PHOTONIC(RcEnergyTier.ZPM, TechRebornConfig.photonicGenerationRateD, TechRebornConfig.photonicGenerationRateN),
+		DIFFRACTIVE(RcEnergyTier.UV, TechRebornConfig.diffractiveGenerationRateD, TechRebornConfig.diffractiveGenerationRateN),
+		PROTONIC(RcEnergyTier.UHV, TechRebornConfig.protonicGenerationRateD, TechRebornConfig.protonicGenerationRateN),
+		NEUTRON(RcEnergyTier.UEV, TechRebornConfig.neutronGenerationRateD, TechRebornConfig.neutronGenerationRateN),
+		BARYON(RcEnergyTier.UIV, TechRebornConfig.baryonGenerationRateD, TechRebornConfig.baryonGenerationRateN),
+		HADRON(RcEnergyTier.UXV, TechRebornConfig.hadronGenerationRateD, TechRebornConfig.hadronGenerationRateN),
+		QUARK(RcEnergyTier.MAX, TechRebornConfig.quarkGenerationRateD, TechRebornConfig.quarkGenerationRateN),
 		CREATIVE(RcEnergyTier.INFINITE, Integer.MAX_VALUE / 100, Integer.MAX_VALUE / 100);
 
 		public final String name;
 		public final Block block;
 
 		// Generation of EU during Day
-		public final int generationRateD;
+		public final long generationRateD;
 		// Generation of EU during Night
-		public final int generationRateN;
+		public final long generationRateN;
 		// Internal EU storage of solar panel
-		public final int internalCapacity;
+		public final long internalCapacity;
 		public final RcEnergyTier powerTier;
 
-		SolarPanels(RcEnergyTier tier, int generationRateD, int generationRateN) {
+		SolarPanels(RcEnergyTier tier, long generationRateD, long generationRateN) {
 			name = this.toString().toLowerCase(Locale.ROOT);
 			powerTier = tier;
 			block = new BlockSolarPanel(this);
@@ -418,7 +426,7 @@ public class TRContent {
 		public final FluidValue capacity;
 
 
-		TankUnit(int capacity) {
+		TankUnit(long capacity) {
 			name = this.toString().toLowerCase(Locale.ROOT);
 			block = new TankUnitBlock(this);
 			this.capacity = FluidValue.BUCKET.multiply(capacity);
@@ -456,29 +464,29 @@ public class TRContent {
 	}
 
 	public enum Cables implements ItemConvertible {
-		COPPER(128, 12.0, true, RcEnergyTier.MEDIUM),
-		TIN(32, 12.0, true, RcEnergyTier.LOW),
-		GOLD(512, 12.0, true, RcEnergyTier.HIGH),
-		HV(2048, 12.0, true, RcEnergyTier.EXTREME),
-		GLASSFIBER(8192, 12.0, false, RcEnergyTier.INSANE),
-		INSULATED_COPPER(128, 10.0, false, RcEnergyTier.MEDIUM),
-		INSULATED_GOLD(512, 10.0, false, RcEnergyTier.HIGH),
-		INSULATED_HV(2048, 10.0, false, RcEnergyTier.EXTREME),
+		COPPER(128, 12.0, true, RcEnergyTier.MV),
+		TIN(32, 12.0, true, RcEnergyTier.LV),
+		GOLD(512, 12.0, true, RcEnergyTier.HV),
+		HV(2048, 12.0, true, RcEnergyTier.EV),
+		GLASSFIBER(8192, 12.0, false, RcEnergyTier.IV),
+		INSULATED_COPPER(128, 10.0, false, RcEnergyTier.MV),
+		INSULATED_GOLD(512, 10.0, false, RcEnergyTier.HV),
+		INSULATED_HV(2048, 10.0, false, RcEnergyTier.EV),
 		SUPERCONDUCTOR(Integer.MAX_VALUE / 4, 10.0, false, RcEnergyTier.INFINITE);
 
 
 		public final String name;
 		public final CableBlock block;
 
-		public final int transferRate;
-		public final int defaultTransferRate;
+		public final long transferRate;
+		public final long defaultTransferRate;
 		public final double cableThickness;
 		public final boolean canKill;
 		public final boolean defaultCanKill;
 		public final RcEnergyTier tier;
 
 
-		Cables(int transferRate, double cableThickness, boolean canKill, RcEnergyTier tier) {
+		Cables(long transferRate, double cableThickness, boolean canKill, RcEnergyTier tier) {
 			name = this.toString().toLowerCase(Locale.ROOT);
 			this.transferRate = transferRate;
 			this.defaultTransferRate = transferRate;

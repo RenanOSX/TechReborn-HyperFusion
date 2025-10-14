@@ -52,7 +52,7 @@ public class InterdimensionalSUBlockEntity extends EnergyStorageBlockEntity impl
 	private long clientEnergy;
 
 	public InterdimensionalSUBlockEntity(BlockPos pos, BlockState state) {
-		super(TRBlockEntities.INTERDIMENSIONAL_SU, pos, state, "IDSU", 2, TRContent.Machine.INTERDIMENSIONAL_SU.block, RcEnergyTier.INSANE, TechRebornConfig.idsuMaxEnergy);
+		super(TRBlockEntities.INTERDIMENSIONAL_SU, pos, state, "IDSU", 2, TRContent.Machine.INTERDIMENSIONAL_SU.block, RcEnergyTier.IV, TechRebornConfig.idsuMaxEnergy);
 	}
 
 	@Override

@@ -56,7 +56,7 @@ public class AbstractBlockBlockEntity extends GenericMachineBlockEntity implemen
 	 * @param toolDrop        {@link Block} Block to drop with wrench
 	 * @param energySlot      {@code int} Energy slot to use to charge machine from battery
 	 */
-	public AbstractBlockBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, int maxInput, int maxEnergy, Block toolDrop, int energySlot) {
+	public AbstractBlockBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, String name, long maxInput, long maxEnergy, Block toolDrop, int energySlot) {
 		super(blockEntityType, pos, state, name, maxInput, maxEnergy, toolDrop, energySlot);
 	}
 
@@ -106,7 +106,7 @@ public class AbstractBlockBlockEntity extends GenericMachineBlockEntity implemen
 
 	//BlockBreakerProcessable
 	@Override
-	public boolean consumeEnergy(int amount) {
+	public boolean consumeEnergy(long amount) {
 		return tryUseExact(getEuPerTick(amount));
 	}
 

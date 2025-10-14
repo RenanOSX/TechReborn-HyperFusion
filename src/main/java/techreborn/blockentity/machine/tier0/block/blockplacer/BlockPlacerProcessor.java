@@ -54,9 +54,9 @@ public class BlockPlacerProcessor extends BlockPlacerNbt implements BlockProcess
 	private final int fakeOutputSlot;
 
 	private final int basePlaceTime;
-	private final int baseCostToPlace;
+	private final long baseCostToPlace;
 
-	public BlockPlacerProcessor(BlockProcessable processable, int inputSlot, int fakeOutputSlot, int basePlaceTime, int baseCostToPlace) {
+	public BlockPlacerProcessor(BlockProcessable processable, int inputSlot, int fakeOutputSlot, int basePlaceTime, long baseCostToPlace) {
 		this.processable = processable;
 
 		this.inputSlot = inputSlot;

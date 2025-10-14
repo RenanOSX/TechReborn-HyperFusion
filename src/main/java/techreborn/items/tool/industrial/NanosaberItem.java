@@ -109,7 +109,7 @@ public class NanosaberItem extends SwordItem implements RcEnergyItem {
 
 	@Override
 	public RcEnergyTier getTier() {
-		return RcEnergyTier.EXTREME;
+		return RcEnergyTier.EV;
 	}
 
 	@Override

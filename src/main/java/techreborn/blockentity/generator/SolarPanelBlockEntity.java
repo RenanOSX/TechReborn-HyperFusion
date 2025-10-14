@@ -57,7 +57,7 @@ public class SolarPanelBlockEntity extends PowerAcceptorBlockEntity implements I
 	private boolean generating = false;
 
 	// Range of panel between day/night production; we calculate this only when panel is updated
-	private int dayNightRange = 0;
+	private long dayNightRange = 0;
 
 	private SolarPanels panel;
 
@@ -111,7 +111,7 @@ public class SolarPanelBlockEntity extends PowerAcceptorBlockEntity implements I
 		setIsGenerating(world.isSkyVisible(pos.up()));
 	}
 
-	public int getGenerationRate() {
+	public long getGenerationRate() {
 		if (!isGenerating()) {
 			return 0;
 		}
@@ -138,7 +138,7 @@ public class SolarPanelBlockEntity extends PowerAcceptorBlockEntity implements I
 			multiplier = (0.25f - skyAngle) / 0.25f;
 		}
 
-		return (int)Math.ceil(getPanel().generationRateN + (dayNightRange * multiplier));
+		return (long)Math.ceil(getPanel().generationRateN + (dayNightRange * multiplier));
 	}
 
 
@@ -178,10 +178,10 @@ public class SolarPanelBlockEntity extends PowerAcceptorBlockEntity implements I
 	@Override
 	public long getBaseMaxOutput() {
 		if (getPanel() == TRContent.SolarPanels.CREATIVE) {
-			return RcEnergyTier.INSANE.getMaxOutput();
+			return RcEnergyTier.INFINITE.getMaxOutput();
 		}
 		// Solar panel output will only be limited by the cables the users use
-		return RcEnergyTier.EXTREME.getMaxOutput();
+		return RcEnergyTier.EV.getMaxOutput();
 	}
 
 	@Override

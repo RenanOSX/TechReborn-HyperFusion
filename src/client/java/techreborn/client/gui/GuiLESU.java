@@ -67,6 +67,6 @@ public class GuiLESU extends GuiBase<BuiltScreenHandler> {
 				35, 0, 58, layer);
 		matrices.pop();
 
-		builder.drawMultiEnergyBar(drawContext, this, 81, 28, (int) blockEntity.getEnergy(), (int) blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
+	builder.drawMultiEnergyBar(drawContext, this, 81, 28, blockEntity.getEnergy(), blockEntity.getMaxStoredPower(), mouseX, mouseY, 0, layer);
 	}
 }

@@ -126,7 +126,7 @@ public class ElevatorBlockEntity extends PowerAcceptorBlockEntity implements ITo
 	/**
 	 * @param targetPos the position of another elevator
 	 */
-	public int energyCost(final BlockPos targetPos) {
+	public long energyCost(final BlockPos targetPos) {
 		return Math.max(Math.abs(targetPos.getY()-getPos().getY())*TechRebornConfig.elevatorEnergyPerBlock,0);
 	}
 
@@ -137,7 +137,7 @@ public class ElevatorBlockEntity extends PowerAcceptorBlockEntity implements ITo
 		if (!(getWorld() instanceof ServerWorld)) {
 			return false;
 		}
-		final int energy = energyCost(targetPos);
+		final long energy = energyCost(targetPos);
 		if (getStored() < energy) {
 			return false;
 		}

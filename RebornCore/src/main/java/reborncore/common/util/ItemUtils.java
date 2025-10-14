@@ -255,7 +255,7 @@ public class ItemUtils {
 	 * @param stack     {@link ItemStack} Stack to check
 	 * @param cost      {@link int} Cost of operation performed by tool
 	 */
-	public static void checkActive(ItemStack stack, int cost, Entity player) {
+	public static void checkActive(ItemStack stack, long cost, Entity player) {
 		if (!ItemUtils.isActive(stack)) {
 			return;
 		}
@@ -282,7 +282,7 @@ public class ItemUtils {
 	 * @param stack     {@link ItemStack} Stack to switch state
 	 * @param cost      {@code int} Cost of operation performed by tool
 	 */
-	public static void switchActive(ItemStack stack, int cost, Entity entity) {
+	public static void switchActive(ItemStack stack, long cost, Entity entity) {
 		ItemUtils.checkActive(stack, cost, entity);
 
 		if (!ItemUtils.isActive(stack)) {

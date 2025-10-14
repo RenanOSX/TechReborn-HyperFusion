@@ -55,11 +55,11 @@ import java.util.stream.Collectors;
 public class IndustrialJackhammerItem extends JackhammerItem implements MultiBlockBreakingTool {
 
 	public IndustrialJackhammerItem() {
-		super(TRToolMaterials.INDUSTRIAL_JACKHAMMER, TechRebornConfig.industrialJackhammerCharge, RcEnergyTier.INSANE, TechRebornConfig.industrialJackhammerCost);
+		super(TRToolMaterials.INDUSTRIAL_JACKHAMMER, TechRebornConfig.industrialJackhammerCharge, RcEnergyTier.IV, TechRebornConfig.industrialJackhammerCost);
 	}
 
 	// Cycle Inactive, Active 3*3 and Active 5*5
-	private void switchAOE(ItemStack stack, int cost, Entity entity) {
+	private void switchAOE(ItemStack stack, long cost, Entity entity) {
 		ItemUtils.checkActive(stack, cost, entity);
 		if (!ItemUtils.isActive(stack)) {
 			ItemUtils.switchActive(stack, cost, entity);

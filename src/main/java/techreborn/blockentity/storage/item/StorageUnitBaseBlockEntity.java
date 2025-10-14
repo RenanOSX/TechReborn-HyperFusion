@@ -340,7 +340,7 @@ public class StorageUnitBaseBlockEntity extends MachineBaseBlockEntity implement
 		}
 
 		// Renderer only
-		tagCompound.putInt("totalStoredAmount", getCurrentCapacity());
+		tagCompound.putLong("totalStoredAmount", getCurrentCapacity());
 
 		if (isLocked()) {
 			tagCompound.put("lockedItem", lockedItemStack.writeNbt(new NbtCompound()));

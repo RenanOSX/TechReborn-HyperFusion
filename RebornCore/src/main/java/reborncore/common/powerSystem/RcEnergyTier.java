@@ -28,27 +28,34 @@ package reborncore.common.powerSystem;
  * Standard input / output limits for RC-based machines.
  */
 public enum RcEnergyTier {
-	MICRO(8, 8),
-	LOW(32, 32),
-	MEDIUM(128, 128),
-	HIGH(512, 512),
-	EXTREME(2048, 2048),
-	INSANE(8192, 8192),
+	LV(8, 8),
+	MV(32, 32),
+	HV(128, 128),
+	EV(512, 512),
+	IV(2048, 2048),
+	LUV(8192, 8192),
+	ZPM(32768, 32768),
+	UV(131072, 131072),
+	UHV(524288, 524288),
+	UEV(2097152, 2097152),
+	UIV(8388608, 8388608),
+	UXV(33554432, 33554432),
+	MAX(134217728, 134217728),
 	INFINITE(Integer.MAX_VALUE, Integer.MAX_VALUE);
 
-	private final int maxInput;
-	private final int maxOutput;
+	private final long maxInput;
+	private final long maxOutput;
 
-	RcEnergyTier(int maxInput, int maxOutput) {
+	RcEnergyTier(long maxInput, long maxOutput) {
 		this.maxInput = maxInput;
 		this.maxOutput = maxOutput;
 	}
 
-	public int getMaxInput() {
+	public long getMaxInput() {
 		return maxInput;
 	}
 
-	public int getMaxOutput() {
+	public long getMaxOutput() {
 			return maxOutput;
 		}
 

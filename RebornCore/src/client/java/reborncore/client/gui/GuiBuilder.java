@@ -411,7 +411,7 @@ public class GuiBuilder {
 	 * @param maxOutput {@code int} Energy output value
 	 * @param layer     {@link GuiBase.Layer} The layer to draw on
 	 */
-	public void drawEnergyOutput(DrawContext drawContext, GuiBase<?> gui, int x, int y, int maxOutput, GuiBase.Layer layer) {
+	public void drawEnergyOutput(DrawContext drawContext, GuiBase<?> gui, int x, int y, long maxOutput, GuiBase.Layer layer) {
 		if (gui.hideGuiElements()) return;
 		Text text = Text.literal(PowerSystem.getLocalizedPowerNoSuffix(maxOutput))
 				.append(SPACE_TEXT)

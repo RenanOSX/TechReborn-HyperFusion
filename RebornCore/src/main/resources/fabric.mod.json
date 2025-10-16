@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "reborncore",
 	"version": "${version}",
-	"name": "Reborn Core",
+	"name": "Reborn Core (TechReborn: Hyper Fusion)",
 	"icon": "assets/reborncore/icon.png",
 	"description": "Reborn Core is a library used for many of the Tech Reborn team's mods, including Tech Reborn, Quantum Storage, Fluxed Redstone, Hardcore Map Reset, and many more.",
 	"license": "MIT",
@@ -37,7 +37,8 @@
 	"authors": [
 		"Team Reborn",
 		"modmuss50",
-		"drcrazy"
+		"drcrazy",
+		"RenanOSX"
 	],
 	"contributors": [
 		"Gigabit101",

@@ -1,5 +1,7 @@
 /bin
 /out
+/WikiHyperFusion
+/WikiHyperFusion/*
 /run/*
 /build
 /eclipse

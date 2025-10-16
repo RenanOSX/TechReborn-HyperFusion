@@ -73,8 +73,6 @@ public class FusionControlComputerBlockEntity extends GenericMachineBlockEntity 
 		this.inventory = new RebornInventory<>(3, "FusionControlComputerBlockEntity", 64, this);
 	}
 
-
-
 	public FusionReactorRecipe getCurrentRecipeFromID() {
 		if (currentRecipeID == null) return null;
 		return ModRecipes.FUSION_REACTOR.getRecipes(world).stream()

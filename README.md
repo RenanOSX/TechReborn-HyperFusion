@@ -36,22 +36,24 @@ Each tier pushes technology beyond conventional science — from subatomic fusio
 
 Hyper Fusion redefines the Tech Reborn power hierarchy with **new ultra-high energy levels**, supporting both *input* and *output* power values:
 
-| Tier | Input | Output |
-|------|--------|---------|
-| LV | 8 | 8 |
-| MV | 32 | 32 |
-| HV | 128 | 128 |
-| EV | 512 | 512 |
-| IV | 2,048 | 2,048 |
-| LUV | 8,192 | 8,192 |
-| ZPM | 32,768 | 32,768 |
-| UV | 131,072 | 131,072 |
-| UHV | 524,288 | 524,288 |
-| UEV | 2,097,152 | 2,097,152 |
-| UIV | 8,388,608 | 8,388,608 |
-| UXV | 33,554,432 | 33,554,432 |
-| MAX | 134,217,728 | 134,217,728 |
-| INFINITE | ∞ | ∞ |
+| TIER | NAME                         | EU/t (Input & Output) |
+|------|------------------------------|------------------------|
+| ULV  | Ultra Low Voltage            | 8                      |
+| LV   | Low Voltage                  | 32                     |
+| MV   | Medium Voltage               | 128                    |
+| HV   | High Voltage                 | 512                    |
+| EV   | Extreme Voltage              | 2,048                  |
+| IV   | Insane Voltage               | 8,192                  |
+| LuV  | Ludicrous Voltage            | 32,768                 |
+| ZPM  | ZPM Voltage                  | 131,072                |
+| UV   | Ultimate Voltage             | 524,288                |
+| UHV  | Highly Ultimate Voltage      | 2,097,152              |
+| UEV  | Extremely Ultimate Voltage   | 8,388,608              |
+| UIV  | Insanely Ultimate Voltage    | 33,554,432             |
+| UMV  | Mega Ultimate Voltage        | 134,217,728            |
+| UXV  | Extended Mega Ultimate Voltage | 536,870,912          |
+| MAX  | Maximum Voltage              | 2,147,483,640          |
+| INFINITE | Infinite Voltage         | ∞                      |
 
 Energy is no longer a limitation — it’s the very fabric you command.
 

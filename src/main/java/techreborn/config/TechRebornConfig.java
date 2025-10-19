@@ -447,6 +447,12 @@ public class TechRebornConfig {
 	@Config(config = "machines", category = "assembling_machine", key = "AssemblingMachineMaxEnergy", comment = "Assembling Machine Max Energy")
 	public static long assemblingMachineMaxEnergy = 10_000;
 
+	@Config(config = "machines", category = "industrial_assembler", key = "IndustrialAssemblerMaxInput", comment = "Industrial Assembler Max Input (Energy per tick)")
+	public static long industrialAssemblerMaxInput = 512;
+
+	@Config(config = "machines", category = "industrial_assembler", key = "IndustrialAssemblerMaxEnergy", comment = "Industrial Assembler Max Energy")
+	public static long industrialAssemblerMaxEnergy = 50_000;
+
 	@Config(config = "machines", category = "matter_fabricator", key = "MatterFabricatorMaxInput", comment = "Matter Fabricator Max Input (Energy per tick)")
 	public static long matterFabricatorMaxInput = 8192;
 
@@ -823,6 +829,9 @@ public class TechRebornConfig {
 
 	@Config(config = "world", category = "generation", key = "enableTungstenOreGeneration", comment = "When enabled and enableOreGeneration isn't disabled, tungsten ores will generate in the world")
 	public static boolean enableTungstenOreGeneration = true;
+
+	@Config(config = "world", category = "generation", key = "enableUraniumOreGeneration", comment = "When enabled and enableOreGeneration isn't disabled, uranium ores will generate in the world")
+	public static boolean enableUraniumOreGeneration = true;
 
 	@Config(config = "world", category = "generation", key = "enableRubberTreeGeneration", comment = "When enabled rubber trees will generate in the world")
 	public static boolean enableRubberTreeGeneration = true;

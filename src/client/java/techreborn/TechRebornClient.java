@@ -163,6 +163,7 @@ public class TechRebornClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.Machine.ALARM.block, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.RUBBER_SAPLING, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.REINFORCED_GLASS, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.IRRADIANT_REINFORCED_GLASS, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.Machine.RESIN_BASIN.block, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.POTTED_RUBBER_SAPLING, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(TRContent.Machine.FISHING_STATION.block, RenderLayer.getCutout());

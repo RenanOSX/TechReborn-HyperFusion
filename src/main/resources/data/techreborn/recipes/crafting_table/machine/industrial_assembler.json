@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ECE",
+    "CFC",
+    "EAE"
+  ],
+  "key": {
+    "A": {
+      "item": "techreborn:assembly_machine"
+    },
+    "C": {
+      "item": "techreborn:advanced_circuit"
+    },
+    "E": {
+      "item": "techreborn:energy_flow_chip"
+    },
+    "F": {
+      "item": "techreborn:industrial_machine_frame"
+    }
+  },
+  "result": {
+    "item": "techreborn:industrial_assembler"
+  }
+}

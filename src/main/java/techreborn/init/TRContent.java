@@ -66,6 +66,7 @@ import techreborn.blockentity.machine.multiblock.*;
 import techreborn.blockentity.machine.tier0.block.BlockBreakerBlockEntity;
 import techreborn.blockentity.machine.tier0.block.BlockPlacerBlockEntity;
 import techreborn.blockentity.machine.tier1.*;
+import techreborn.blockentity.machine.tier2.IndustrialAssemblerBlockEntity;
 import techreborn.blockentity.machine.tier2.FishingStationBlockEntity;
 import techreborn.blockentity.machine.tier2.LaunchpadBlockEntity;
 import techreborn.blockentity.machine.tier2.PumpBlockEntity;
@@ -119,6 +120,7 @@ public class TRContent {
 	public static Block NUKE;
 	public static Block REFINED_IRON_FENCE;
 	public static Block REINFORCED_GLASS;
+	public static Block IRRADIANT_REINFORCED_GLASS;
 	public static Block RUBBER_LEAVES;
 	public static Block RUBBER_LOG;
 	public static Block RUBBER_SLAB;
@@ -531,6 +533,7 @@ public class TRContent {
 		SPHALERITE(OreDistribution.SPHALERITE),
 		TIN(OreDistribution.TIN),
 		TUNGSTEN(OreDistribution.TUNGSTEN, true),
+		URANIUM(OreDistribution.URANIUM),
 
 		DEEPSLATE_BAUXITE(BAUXITE),
 		DEEPSLATE_GALENA(GALENA),
@@ -543,7 +546,8 @@ public class TRContent {
 		DEEPSLATE_SILVER(SILVER),
 		DEEPSLATE_SODALITE(SODALITE),
 		DEEPSLATE_TIN(TIN),
-		DEEPSLATE_TUNGSTEN(TUNGSTEN);
+		DEEPSLATE_TUNGSTEN(TUNGSTEN),
+		DEEPSLATE_URANIUM(URANIUM);
 
 		public final String name;
 		public final Block block;
@@ -636,6 +640,7 @@ public class TRContent {
 		RAW_SILVER(2f, 2f),
 		RAW_TIN(2f, 2f),
 		RAW_TUNGSTEN(2f, 2f),
+		RAW_URANIUM(2f, 2f),
 		RED_GARNET(5f, 6f),
 		REFINED_IRON(5f, 6f),
 		RUBY(5f, 6f),
@@ -646,6 +651,7 @@ public class TRContent {
 		TITANIUM(5f, 6f),
 		TUNGSTEN(5f, 6f),
 		TUNGSTENSTEEL(30f, 800f),
+		URANIUM(5f, 6f),
 		YELLOW_GARNET(5f, 6f),
 		ZINC(5f, 6f);
 
@@ -757,6 +763,7 @@ public class TRContent {
 	public enum Machine implements ItemConvertible {
 		ALLOY_SMELTER(new GenericMachineBlock(GuiType.ALLOY_SMELTER, AlloySmelterBlockEntity::new)),
 		ASSEMBLY_MACHINE(new GenericMachineBlock(GuiType.ASSEMBLING_MACHINE, AssemblingMachineBlockEntity::new)),
+		INDUSTRIAL_ASSEMBLER(new GenericMachineBlock(GuiType.INDUSTRIAL_ASSEMBLER, IndustrialAssemblerBlockEntity::new)),
 		AUTO_CRAFTING_TABLE(new GenericMachineBlock(GuiType.AUTO_CRAFTING_TABLE, AutoCraftingTableBlockEntity::new)),
 		CHEMICAL_REACTOR(new GenericMachineBlock(GuiType.CHEMICAL_REACTOR, ChemicalReactorBlockEntity::new)),
 		COMPRESSOR(new GenericMachineBlock(GuiType.COMPRESSOR, CompressorBlockEntity::new)),
@@ -846,7 +853,7 @@ public class TRContent {
 		CINNABAR, CLAY, COAL, DARK_ASHES, DIAMOND, DIORITE, ELECTRUM, EMERALD, ENDER_EYE, ENDER_PEARL, ENDSTONE,
 		FLINT, GALENA, GRANITE, GROSSULAR, INVAR, LAZURITE, MAGNESIUM, MANGANESE, MARBLE, NETHERRACK,
 		NICKEL, OBSIDIAN, OLIVINE, PERIDOT, PHOSPHOROUS, PLATINUM, PYRITE, PYROPE, QUARTZ, RED_GARNET, RUBY, SALTPETER,
-		SAPPHIRE, SAW, SODALITE, SPESSARTINE, SPHALERITE, STEEL, SULFUR, TITANIUM, UVAROVITE, YELLOW_GARNET, ZINC;
+		SAPPHIRE, SAW, SODALITE, SPESSARTINE, SPHALERITE, STEEL, SULFUR, TITANIUM, URANIUM, UVAROVITE, YELLOW_GARNET, ZINC;
 
 		private final String name;
 		private final Item item;
@@ -883,7 +890,7 @@ public class TRContent {
 	}
 
 	public enum RawMetals implements ItemConvertible, TagConvertible<Item> {
-		IRIDIUM, LEAD, SILVER, TIN, TUNGSTEN;
+		IRIDIUM, LEAD, SILVER, TIN, TUNGSTEN, URANIUM;
 
 		private final String name;
 		private final Item item;
@@ -965,7 +972,7 @@ public class TRContent {
 		FLINT, GALENA, GLOWSTONE(Items.GLOWSTONE_DUST), GRANITE, GROSSULAR, INVAR, LAZURITE, MAGNESIUM, MANGANESE, MARBLE,
 		NETHERRACK, NICKEL, OBSIDIAN, OLIVINE, PERIDOT, PHOSPHOROUS, PLATINUM, PYRITE, PYROPE, QUARTZ, REDSTONE(Items.REDSTONE),
 		RED_GARNET, RUBY, SALTPETER, SAPPHIRE, SAW, SODALITE, SPESSARTINE, SPHALERITE, STEEL, SULFUR, TITANIUM,
-		TUNGSTEN(RawMetals.TUNGSTEN), UVAROVITE, YELLOW_GARNET, ZINC;
+		TUNGSTEN(RawMetals.TUNGSTEN), URANIUM, UVAROVITE, YELLOW_GARNET, ZINC;
 
 		private final String name;
 		private final Item item;
@@ -1143,7 +1150,7 @@ public class TRContent {
 
 	public enum Ingots implements ItemConvertible, TagConvertible<Item> {
 		ADVANCED_ALLOY, ALUMINUM, BRASS, BRONZE, CHROME(CHROME_TAG_NAME_BASE), ELECTRUM, HOT_TUNGSTENSTEEL, INVAR, IRIDIUM_ALLOY, IRIDIUM,
-		LEAD, MIXED_METAL, NICKEL, PLATINUM, REFINED_IRON, SILVER, STEEL, TIN, TITANIUM, TUNGSTEN, TUNGSTENSTEEL, ZINC;
+		LEAD, MIXED_METAL, NICKEL, PLATINUM, REFINED_IRON, SILVER, STEEL, TIN, TITANIUM, TUNGSTEN, TUNGSTENSTEEL, URANIUM, ZINC;
 
 		private final String name;
 		private final Item item;
@@ -1242,7 +1249,7 @@ public class TRContent {
 		ALUMINUM, BRASS, BRONZE, CHROME(CHROME_TAG_NAME_BASE), COPPER(Items.COPPER_INGOT, false), DIAMOND(Items.DIAMOND, true),
 		ELECTRUM, EMERALD(Items.EMERALD, true), HOT_TUNGSTENSTEEL, INVAR, IRIDIUM, LEAD,
 		NETHERITE, /* We do NOT link to the netherite ingot here, because we want custom conversion recipes! */
-		NICKEL, PLATINUM, REFINED_IRON, SILVER, STEEL, TIN, TITANIUM, TUNGSTEN, TUNGSTENSTEEL, ZINC;
+		NICKEL, PLATINUM, REFINED_IRON, SILVER, STEEL, TIN, TITANIUM, TUNGSTEN, TUNGSTENSTEEL, URANIUM, ZINC;
 
 		private final String name;
 		private final Item item;
@@ -1434,6 +1441,7 @@ public class TRContent {
 		TITANIUM,
 		TUNGSTEN,
 		TUNGSTENSTEEL,
+		URANIUM,
 		WOOD,
 		YELLOW_GARNET,
 		ZINC;

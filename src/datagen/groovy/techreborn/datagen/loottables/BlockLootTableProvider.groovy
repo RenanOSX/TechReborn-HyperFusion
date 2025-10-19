@@ -26,6 +26,7 @@ package techreborn.datagen.loottables
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider
+import net.minecraft.item.Item
 import net.minecraft.registry.RegistryWrapper
 import techreborn.init.TRContent
 
@@ -90,7 +91,10 @@ class BlockLootTableProvider extends FabricBlockLootTableProvider{
 		addDrop(TRContent.NUKE)
 		addDrop(TRContent.REFINED_IRON_FENCE)
 		addDrop(TRContent.REINFORCED_GLASS)
-
+		addDrop(TRContent.IRRADIANT_REINFORCED_GLASS)
+		TRContent.RawMetals.getRM2OBMap().each { raw, ore ->
+			addRawOreDrop(ore, raw.asItem())
+		}
 		addOreDrop(TRContent.Ores.BAUXITE)
 		addOreDrop(TRContent.Ores.GALENA)
 		addOreDrop(TRContent.Ores.SHELDONITE)
@@ -101,6 +105,14 @@ class BlockLootTableProvider extends FabricBlockLootTableProvider{
 		def deepslate = ore.getDeepslate()
 		if (deepslate != null) {
 			addDrop(deepslate.block)
+		}
+	}
+
+	private void addRawOreDrop(TRContent.Ores ore, Item rawDrop) {
+		addDrop(ore.block, oreDrops(ore.block, rawDrop))
+		def deepslate = ore.getDeepslate()
+		if (deepslate != null) {
+			addDrop(deepslate.block, oreDrops(deepslate.block, rawDrop))
 		}
 	}
 }

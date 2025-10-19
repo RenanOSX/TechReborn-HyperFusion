@@ -56,6 +56,7 @@ import techreborn.blockentity.machine.multiblock.casing.MachineCasingBlockEntity
 import techreborn.blockentity.machine.tier0.block.BlockBreakerBlockEntity;
 import techreborn.blockentity.machine.tier0.block.BlockPlacerBlockEntity;
 import techreborn.blockentity.machine.tier1.*;
+import techreborn.blockentity.machine.tier2.IndustrialAssemblerBlockEntity;
 import techreborn.blockentity.machine.tier2.FishingStationBlockEntity;
 import techreborn.blockentity.machine.tier2.LaunchpadBlockEntity;
 import techreborn.blockentity.machine.tier3.ChunkLoaderBlockEntity;
@@ -101,6 +102,7 @@ public class TRBlockEntities {
 	public static final BlockEntityType<MachineCasingBlockEntity> MACHINE_CASINGS = register(MachineCasingBlockEntity::new, "machine_casing", TRContent.MachineBlocks.getCasings());
 	public static final BlockEntityType<DragonEggSyphonBlockEntity> DRAGON_EGG_SYPHON = register(DragonEggSyphonBlockEntity::new, "dragon_egg_syphon", TRContent.Machine.DRAGON_EGG_SYPHON);
 	public static final BlockEntityType<AssemblingMachineBlockEntity> ASSEMBLY_MACHINE = register(AssemblingMachineBlockEntity::new, "assembly_machine", TRContent.Machine.ASSEMBLY_MACHINE);
+	public static final BlockEntityType<IndustrialAssemblerBlockEntity> INDUSTRIAL_ASSEMBLER = register(IndustrialAssemblerBlockEntity::new, "industrial_assembler", TRContent.Machine.INDUSTRIAL_ASSEMBLER);
 	public static final BlockEntityType<DieselGeneratorBlockEntity> DIESEL_GENERATOR = register(DieselGeneratorBlockEntity::new, "diesel_generator", TRContent.Machine.DIESEL_GENERATOR);
 	public static final BlockEntityType<IndustrialElectrolyzerBlockEntity> INDUSTRIAL_ELECTROLYZER = register(IndustrialElectrolyzerBlockEntity::new, "industrial_electrolyzer", TRContent.Machine.INDUSTRIAL_ELECTROLYZER);
 	public static final BlockEntityType<SemiFluidGeneratorBlockEntity> SEMI_FLUID_GENERATOR = register(SemiFluidGeneratorBlockEntity::new, "semi_fluid_generator", TRContent.Machine.SEMI_FLUID_GENERATOR);

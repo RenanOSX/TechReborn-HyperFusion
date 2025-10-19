@@ -123,6 +123,7 @@ public class TRItemGroup {
 		entries.addAfter(TRContent.RawMetals.SILVER, TRContent.StorageBlocks.RAW_SILVER);
 		entries.addAfter(TRContent.RawMetals.IRIDIUM, TRContent.StorageBlocks.RAW_IRIDIUM);
 		entries.addAfter(TRContent.RawMetals.TUNGSTEN, TRContent.StorageBlocks.RAW_TUNGSTEN);
+		entries.addAfter(TRContent.RawMetals.URANIUM, TRContent.StorageBlocks.RAW_URANIUM);
 		for (TRContent.StorageBlocks block : TRContent.StorageBlocks.values()) {
 			entries.addAfter(block,
 				block.getStairsBlock(),
@@ -145,6 +146,7 @@ public class TRItemGroup {
 		addContent(TRContent.Parts.values(), entries);
 		entries.add(TRContent.FREQUENCY_TRANSMITTER);
 		entries.add(TRContent.REINFORCED_GLASS);
+		entries.add(TRContent.IRRADIANT_REINFORCED_GLASS);
 		entries.addAfter(TRContent.Parts.SCRAP, TRContent.SCRAP_BOX);
 
 		// machines
@@ -377,10 +379,18 @@ public class TRItemGroup {
 			TRContent.StorageBlocks.RAW_TUNGSTEN.getStairsBlock(),
 			TRContent.StorageBlocks.RAW_TUNGSTEN.getSlabBlock(),
 			TRContent.StorageBlocks.RAW_TUNGSTEN.getWallBlock(),
+			TRContent.StorageBlocks.RAW_URANIUM,
+			TRContent.StorageBlocks.RAW_URANIUM.getStairsBlock(),
+			TRContent.StorageBlocks.RAW_URANIUM.getSlabBlock(),
+			TRContent.StorageBlocks.RAW_URANIUM.getWallBlock(),
 			TRContent.StorageBlocks.TUNGSTEN,
 			TRContent.StorageBlocks.TUNGSTEN.getStairsBlock(),
 			TRContent.StorageBlocks.TUNGSTEN.getSlabBlock(),
 			TRContent.StorageBlocks.TUNGSTEN.getWallBlock(),
+			TRContent.StorageBlocks.URANIUM,
+			TRContent.StorageBlocks.URANIUM.getStairsBlock(),
+			TRContent.StorageBlocks.URANIUM.getSlabBlock(),
+			TRContent.StorageBlocks.URANIUM.getWallBlock(),
 			TRContent.StorageBlocks.TUNGSTENSTEEL,
 			TRContent.StorageBlocks.TUNGSTENSTEEL.getStairsBlock(),
 			TRContent.StorageBlocks.TUNGSTENSTEEL.getSlabBlock(),
@@ -401,6 +411,7 @@ public class TRItemGroup {
 
 	private static void addColoredBlocks(FabricItemGroupEntries entries) {
 		entries.addBefore(Items.TINTED_GLASS, TRContent.REINFORCED_GLASS);
+		entries.addBefore(Items.TINTED_GLASS, TRContent.IRRADIANT_REINFORCED_GLASS);
 	}
 
 	private static void addNaturalBlocks(FabricItemGroupEntries entries) {
@@ -424,13 +435,17 @@ public class TRItemGroup {
 			TRContent.Ores.SHELDONITE,
 			TRContent.Ores.SODALITE,
 			TRContent.Ores.TUNGSTEN);
+		entries.addAfter(TRContent.Ores.TUNGSTEN,
+			TRContent.Ores.URANIUM,
+			TRContent.Ores.DEEPSLATE_URANIUM);
 		entries.addBefore(Items.RAW_IRON_BLOCK, TRContent.StorageBlocks.RAW_TIN);
 		entries.addAfter(Items.RAW_COPPER_BLOCK,
 			TRContent.StorageBlocks.RAW_LEAD,
 			TRContent.StorageBlocks.RAW_SILVER);
 		entries.addAfter(Items.RAW_GOLD_BLOCK,
 			TRContent.StorageBlocks.RAW_IRIDIUM,
-			TRContent.StorageBlocks.RAW_TUNGSTEN);
+			TRContent.StorageBlocks.RAW_TUNGSTEN,
+			TRContent.StorageBlocks.RAW_URANIUM);
 		entries.addAfter(Items.MANGROVE_LOG, TRContent.RUBBER_LOG);
 		entries.addAfter(Items.MUDDY_MANGROVE_ROOTS, TRContent.RUBBER_LEAVES);
 		entries.addAfter(Items.MANGROVE_PROPAGULE, TRContent.RUBBER_SAPLING);
@@ -446,7 +461,7 @@ public class TRItemGroup {
 			TRContent.Machine.BLOCK_BREAKER,
 			TRContent.Machine.BLOCK_PLACER);
 		entries.addAfter(Items.STONECUTTER, TRContent.Machine.RESIN_BASIN);
-		entries.addAfter(Items.SMITHING_TABLE, TRContent.Machine.ASSEMBLY_MACHINE);
+		entries.addAfter(Items.SMITHING_TABLE, TRContent.Machine.ASSEMBLY_MACHINE, TRContent.Machine.INDUSTRIAL_ASSEMBLER);
 		entries.addAfter(Items.FURNACE,
 			TRContent.Machine.IRON_FURNACE,
 			TRContent.Machine.ELECTRIC_FURNACE);

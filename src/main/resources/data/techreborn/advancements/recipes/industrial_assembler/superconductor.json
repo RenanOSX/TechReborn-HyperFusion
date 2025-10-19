@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "techreborn:industrial_assembler/superconductor"
+    ]
+  },
+  "criteria": {
+    "has_helium_coolant_cell": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["techreborn:helium_coolant_cell_60k"]
+          }
+        ]
+      }
+    },
+    "has_tungsten_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["techreborn:tungsten_ingot"]
+          }
+        ]
+      }
+    },
+    "has_energy_flow_chip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["techreborn:energy_flow_chip"]
+          }
+        ]
+      }
+    },
+    "has_iridium_alloy_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["techreborn:iridium_alloy_plate"]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "techreborn:industrial_assembler/superconductor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_helium_coolant_cell",
+      "has_tungsten_ingot",
+      "has_energy_flow_chip",
+      "has_iridium_alloy_plate",
+      "has_the_recipe"
+    ]
+  ]
+}

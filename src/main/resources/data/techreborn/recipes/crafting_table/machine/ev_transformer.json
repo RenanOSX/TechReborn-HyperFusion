@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H",
+    "M",
+    "H"
+  ],
+  "key": {
+    "H": {
+      "item": "techreborn:glassfiber_cable"
+    },
+    "M": {
+      "item": "techreborn:hv_transformer"
+    }
+  },
+  "result": {
+    "item": "techreborn:ev_transformer"
+  }
+}

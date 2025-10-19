@@ -1,0 +1,29 @@
+{
+  "type": "techreborn:industrial_assembler",
+  "power": 40,
+  "time": 3600,
+  "ingredients": [
+    {
+      "item": "techreborn:helium_coolant_cell_60k",
+      "count": 3
+    },
+    {
+      "item": "techreborn:tungsten_ingot",
+      "count": 2
+    },
+    {
+      "item": "techreborn:energy_flow_chip",
+      "count": 3
+    },
+    {
+      "item": "techreborn:iridium_alloy_plate",
+      "count": 1
+    }
+  ],
+  "results": [
+    {
+      "item": "techreborn:superconductor",
+      "count": 2
+    }
+  ]
+}

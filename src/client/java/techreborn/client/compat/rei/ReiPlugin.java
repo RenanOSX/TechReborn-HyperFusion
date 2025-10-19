@@ -105,6 +105,7 @@ public class ReiPlugin implements REIClientPlugin {
 	public ReiPlugin() {
 		iconMap.put(ModRecipes.ALLOY_SMELTER, Machine.ALLOY_SMELTER);
 		iconMap.put(ModRecipes.ASSEMBLING_MACHINE, Machine.ASSEMBLY_MACHINE);
+		iconMap.put(ModRecipes.INDUSTRIAL_ASSEMBLER, Machine.INDUSTRIAL_ASSEMBLER);
 		iconMap.put(ModRecipes.BLAST_FURNACE, Machine.INDUSTRIAL_BLAST_FURNACE);
 		iconMap.put(ModRecipes.CENTRIFUGE, Machine.INDUSTRIAL_CENTRIFUGE);
 		iconMap.put(ModRecipes.CHEMICAL_REACTOR, Machine.CHEMICAL_REACTOR);
@@ -134,6 +135,7 @@ public class ReiPlugin implements REIClientPlugin {
 	public void registerCategories(CategoryRegistry registry) {
 		registry.add(new TwoInputsCenterOutputCategory<>(ModRecipes.ALLOY_SMELTER));
 		registry.add(new AssemblingMachineCategory<>(ModRecipes.ASSEMBLING_MACHINE));
+		registry.add(new IndustrialAssemblerCategory<>(ModRecipes.INDUSTRIAL_ASSEMBLER));
 		registry.add(new BlastFurnaceCategory<>(ModRecipes.BLAST_FURNACE));
 		registry.add(new IndustrialCentrifugeCategory<>(ModRecipes.CENTRIFUGE));
 		registry.add(new TwoInputsCenterOutputCategory<>(ModRecipes.CHEMICAL_REACTOR));
@@ -161,6 +163,7 @@ public class ReiPlugin implements REIClientPlugin {
 
 		addWorkstations(ModRecipes.ALLOY_SMELTER.name(), EntryStacks.of(Machine.ALLOY_SMELTER), EntryStacks.of(Machine.IRON_ALLOY_FURNACE));
 		addWorkstations(ModRecipes.ASSEMBLING_MACHINE.name(), EntryStacks.of(Machine.ASSEMBLY_MACHINE));
+		addWorkstations(ModRecipes.INDUSTRIAL_ASSEMBLER.name(), EntryStacks.of(Machine.INDUSTRIAL_ASSEMBLER));
 		addWorkstations(ModRecipes.BLAST_FURNACE.name(), EntryStacks.of(Machine.INDUSTRIAL_BLAST_FURNACE));
 		addWorkstations(ModRecipes.CENTRIFUGE.name(), EntryStacks.of(Machine.INDUSTRIAL_CENTRIFUGE));
 		addWorkstations(ModRecipes.CHEMICAL_REACTOR.name(), EntryStacks.of(Machine.CHEMICAL_REACTOR));

@@ -63,6 +63,9 @@ class SmeltingRecipesProvider extends TechRebornRecipesProvider {
 				(TRContent.RawMetals.SILVER.asTag())   : TRContent.Ingots.SILVER,
 				(TRContent.Ores.TIN.asTag())           : TRContent.Ingots.TIN,
 				(TRContent.RawMetals.TIN.asTag())      : TRContent.Ingots.TIN,
+			(TRContent.Ores.URANIUM.asTag())       : TRContent.Ingots.URANIUM,
+			(TRContent.RawMetals.URANIUM.asTag())  : TRContent.Ingots.URANIUM,
+			(TRContent.Dusts.URANIUM.asTag())      : TRContent.Ingots.URANIUM,
 				(TRContent.Dusts.ZINC.asTag())         : TRContent.Ingots.ZINC
 		].each { input, output ->
 			offerSmelting(input, output)

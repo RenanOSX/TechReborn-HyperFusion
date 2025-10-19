@@ -58,6 +58,7 @@ import techreborn.blockentity.machine.multiblock.*;
 import techreborn.blockentity.machine.tier0.block.BlockBreakerBlockEntity;
 import techreborn.blockentity.machine.tier0.block.BlockPlacerBlockEntity;
 import techreborn.blockentity.machine.tier1.*;
+import techreborn.blockentity.machine.tier2.IndustrialAssemblerBlockEntity;
 import techreborn.blockentity.machine.tier2.FishingStationBlockEntity;
 import techreborn.blockentity.machine.tier2.LaunchpadBlockEntity;
 import techreborn.blockentity.machine.tier3.ChunkLoaderBlockEntity;
@@ -82,6 +83,7 @@ public final class GuiType<T extends BlockEntity> implements IMachineGuiHandler 
 	public static final GuiType<IronAlloyFurnaceBlockEntity> ALLOY_FURNACE = register("alloy_furnace");
 	public static final GuiType<AlloySmelterBlockEntity> ALLOY_SMELTER = register("alloy_smelter");
 	public static final GuiType<AssemblingMachineBlockEntity> ASSEMBLING_MACHINE = register("assembling_machine");
+	public static final GuiType<IndustrialAssemblerBlockEntity> INDUSTRIAL_ASSEMBLER = register("industrial_assembler");
 	public static final GuiType<LowVoltageSUBlockEntity> LOW_VOLTAGE_SU = register("low_voltage_su");
 	public static final GuiType<AutoCraftingTableBlockEntity> AUTO_CRAFTING_TABLE = register("auto_crafting_table");
 	public static final GuiType<IndustrialBlastFurnaceBlockEntity> BLAST_FURNACE = register("blast_furnace");
